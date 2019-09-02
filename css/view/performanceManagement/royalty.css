@@ -1,0 +1,45 @@
+.table th, .table td{
+	text-align: center;
+}
+label{display: inline-block;}
+#content-wrapper label{width:100%;}
+.space-div{height: 20px;}
+
+
+
+
+
+/*搜索条件*/
+.headsearch .title{width: 70px;float:left;padding: 4px 0;}
+.headsearch .title-after{float:left;width: calc( 100% - 80px );margin: 0;}
+.headsearch [class*="span"]{margin-left: 0;margin-bottom: 10px;padding-right: 20px;}
+.headsearch  select{width: calc( 100% - 70px ) !important;border-radius: 0;}
+.buttonCointer{margin: 0 0 10px 0;}
+
+
+
+/*列表*/
+.table-title{padding-top: 20px ;}
+.responsive-table button{margin:3px}
+
+
+
+
+/*时间选择器*/
+.daterangepicker  label{display: block;}
+
+
+input[type='checkbox']{
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+   -webkit-appearance:none;
+   background: url("../../../img/unsel.png")no-repeat center;
+   background-size:18px 18px;
+   border: 0px!important;
+   box-shadow: none!important;
+}
+.checkBox input[type=checkbox]:checked{
+   background: url("../../../img/sel.png")no-repeat center;
+      background-size:18px 18px;
+}

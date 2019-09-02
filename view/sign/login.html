@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>营销管理平台</title>
+		<link href='/css/bootstrap.min.css' media='all' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" type="text/css" href="/css/view/layout/login.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/base.css"/>
+				<!-- / jquery -->
+		<script src='/view/model/assets/javascripts/jquery/jquery.min.js' type='text/javascript'></script>
+		<!--/ cookie-->
+		<script src="/plugins/jquery/cookie/jquery.cookie.js"></script>
+		<!-- / bootstrap -->
+		<script src='/view/model/assets/javascripts/bootstrap/bootstrap.min.js' type='text/javascript'></script>
+		<script src="/plugins/jquery/myJqueryPlugins/myJqueryPlugins.js"></script>
+		<!-- / validate -->
+		<script src='/plugins/skyform/jquery.validate.min.js' type='text/javascript'></script>
+		<script type="text/javascript" src="/plugins/jquery/bluebird/bluebird.js"></script>
+		<script src='/plugins/jquery/Base64/jquery.base64.js' type='text/javascript'></script>		
+	</head>
+	<body>
+		<div class="container login" id="main">
+			<div class='form-wrapper'>
+           		 <h2><img src="/img/logo.png" alt="" width="32"height="38" /> <span class="font-18">营销管理平台</span></h2>           	            	           	          	
+            	<div class="margin-top-40 padding-top-60">
+            		<strong>登录</strong>
+            	</div>            	            	            	
+            	<form class="form-nomal form-horizontal margin-top-20"  role="form" >	
+            		<div ><span class="input-title">用户名</span></div>
+            		<div class="row margin-left-0 margin-right-0 div-input-group">
+            				<img src="/img/view/login/reqired.png" width="7" alt=""class="img-top-right" />
+							<div class="col-xs-1 padding-left-0 padding-right-0 text-center">
+								<img src="/img/view/login/user.png" width="20">
+							</div>
+							<div class="col-xs-11  padding-left-0">
+								<input class="input-no-border username" name="username" placeholder="用户名" type="text" value="" >
+							</div>	
+							<!--<div class="div-error">输入错误</div>-->
+            		</div>
+            		<div ><span class="input-title">登录密码</span></div>
+            		<div class="row margin-left-0 margin-right-0 div-input-group ">
+            				<img src="/img/view/login/reqired.png" width="7" alt=""class="img-top-right" />
+							<div class="col-xs-1 padding-left-0 padding-right-0 text-center">
+								<img src="/img/view/login/lock.png" width="20">
+							</div>
+							<div class="col-xs-11  padding-left-0 " style="position: relative;">
+								<input class="input-no-border password" name="password" placeholder="密码" type="password" value="" >
+								<!--<img src="/img/view/login/help.png" width="14" style="position: absolute;right: 10px;top: 8px;">-->
+							</div>	
+							<!--<div class="div-error">输入错误</div>-->
+            		</div>
+	                <div class="text-right margin-top-30 row margin-left-0 margin-right-0" style="width: 252px;">
+	                		<span  id="remember_me">记住我</span>
+	                		<span class="check checked">
+		                		<img class="toggle toggle-n hide" src="/img/view/login/No.png" width="70"/>
+		                		<img class="toggle toggle-y"  src="/img/view/login/toggle.png" width="70"/>	
+	                		</span>
+	                </div>
+		            <div class="row margin-left-0 margin-right-0 margin-top-10 ">
+            		     <button type="button" onclick="login();" class="login-btn">立即登录</button>
+		            </div>
+            	</form>
+            	<!--<div class="margin-top-20">
+		        	<p><a href="javaScript:void(0);" class="forget-password">忘记密码</a></p>
+		        	<p><a href="javaScript:void(0);" class="reset">重置</a></p>
+		        </div>       -->    	            	           	
+        </div>
+        
+        
+        <div class="footer">
+        	<span> Copyright ©2019 - 中民普惠</span>
+        	<span class="pull-right">在一起创无限</span>
+        </div>
+        
+        
+        
+	</div>
+		<style type="text/css">
+			.modal{
+				box-shadow:0 0 0 0 !important;
+				 border:0 !important
+			}
+		</style>
+	</body>
+</html>
+<script>
+	
+    
+    
+   
+    
+</script>
+<script src='/js/view/sign/login.js' type='text/javascript' type="text/babel"></script>

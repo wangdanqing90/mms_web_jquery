@@ -1,0 +1,124 @@
+<!--组织渠道提成管理-->
+
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<!--#include file = "/view/layout/head-script.html" -->
+
+		<link rel="stylesheet" href="../../css/view/performanceManagement/orgRoyalty.css" />
+		<link rel="stylesheet" href="../../plugins/jquery/tree/tree.css" />
+	</head>
+
+	<body class='contrast-red ' id="main">
+		<!--#include file = "/view/layout/head.html" -->
+		<!--#include file = "/view/layout/left-nav.html" -->
+		<section id='content'>
+            <!--#include file = "/view/layout/header.html" --> 
+			<div class='container-fluid'>
+				<div class='row-fluid' id='content-wrapper'>
+					<div class='span12'>
+						<div class='row-fluid'>
+							<div class='span12'>
+                                <div class='header'>									
+									<div class='pull-left'>
+										<ul class='breadcrumb '>
+											<li class='active'>业绩管理</li>
+											<li class='active'>></li>
+											<li class='active'>组织提成</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--文件树-->
+						<div class="row-fluid treebox-cointer  outerCointer" id="treebox">
+							<div class="centent">
+								<div class="treebox scrollXY">
+									<div class="tree">
+										<ul id="tree_ul">
+
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="treeButtonCointer clearfix">			
+								<button type="button" class="button-blue" onclick="importBtn()">导入提成</button>						
+							</div>
+						</div>
+					
+						<div class="row-fluid oderSearch hide outerCointer" id="add-org">
+							 <div id="searchBoxCointer" class="clearfix searchBox ">															
+									<div class=" margin-top-10 searchItem">
+					                   <div >组织编号</div>
+                                        <input id='products-id' class=""  type='text'  readonly="readonly"/>
+					                </div>
+					                
+					                <div class=" margin-top-10 searchItem">
+					                   <div >组织名称</div>
+                                        <input id='products-name' class=""  type='text'  readonly="readonly"/>
+					                </div>
+					                
+					                <div class=" margin-top-10 searchItem">
+					                   <div >通用提成（‰ ）</div>
+                                        <input id='products-per' class=""  type='text' />
+					                </div>
+					                
+					                <div class="treeButtonCointer clearfix" style="padding: 40px 2% 0 2%;">										     		
+								    <button type="button" class="button-white   margin-left-10" onclick="cancleBtn()">返回</button>	
+								    <button type="button" class="button-blue margin-left-24" id="addBtn" onclick="addBtn()">添加</button>
+							    </div>
+							</div>
+							
+							
+						</div>
+						
+
+						
+						    
+			    </div>
+					</div>
+				</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+		</div>
+		<!--导入文件-->
+		<div id="model-upload" class="modal fade" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">选择文件</h4>
+					</div>
+					<div class="modal-body">
+						<div class='row-fluid'>
+							<a href="javascript:;" class="file" onclick="upload()">选择文件
+							</a>											
+							<input type="file" name="file" id="fileId" onchange="filechange()">
+						</div>
+	
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary button-blue" onclick="check()">导入</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+						
+					</div>
+				</div>
+			</div>
+		</div>		
+		</section>
+		</div>
+
+		<!--#include file = "/view/layout/foot.html" -->
+		<!--#include file = "/view/layout/foot-script.html" -->
+		<script type="text/javascript" src="../../plugins/jquery/tree/treescroll.min.js"></script>
+		<script src='../../js/view/performanceManagement/orgRoyalty.js' type='text/babel'></script>
+	</body>
+
+</html>
+<script>
+</script>

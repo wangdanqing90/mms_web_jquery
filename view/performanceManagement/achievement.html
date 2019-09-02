@@ -1,0 +1,183 @@
+<!--业绩转移-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <!--#include file = "/view/layout/head-script.html" -->
+    
+	<link rel="stylesheet" href="../../css/view/performanceManagement/achievement.css" />
+    <style type="text/css">
+    
+    </style>
+</head>
+<body class='contrast-red ' id="main">
+<!--#include file = "/view/layout/head.html" -->
+<!--#include file = "/view/layout/left-nav.html" -->
+	<section id='content'>
+		<!--#include file = "/view/layout/header.html" -->
+		<div class='container-fluid'>
+			<div class='row-fluid ' id='content-wrapper' style="margin-bottom: 10px">
+				<div class='span12'>
+					<div class='row-fluid'>
+						<div class='span12'>
+							<div class='header'>
+								<div class='pull-left'>
+									<ul class='breadcrumb '>
+										<li class='active'>业绩管理</li>
+										<li class='active'>></li>
+										<li class='active'>员工业绩</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--这里注意样式统一-->
+					<div class="row-fluid searchBox">
+						<div id="searchBoxCointer" class="clearfix ">
+								<div class="achievement-tab">
+									<div class="span12 box">
+										<div class="button-bulebg active" style="border-bottom-left-radius: 4px;border-top-left-radius: 4px;">理财业绩</div>
+										<div class="button-bulebg ">基金业绩</div>
+										<div class="button-bulebg " style="border-bottom-right-radius: 4px;border-top-right-radius: 4px;">小贷业绩</div>
+									</div>
+								</div>
+							    <div class="table-title">查找条件</div>
+							    <div class="achievement-search ">
+									<div class="searchItem">
+										<label class="">业绩时段范围:</label>
+										<input type="text" onfocus="this.blur()" name="daterange" id="changeSpan" class="span12 timeRange" placeholder="开始时间（00:00:00）~ 结束时间（00:00:00）" />
+									</div>
+									<div class="searchItem padding-left">
+										<label class="">员工姓名:</label>
+										<input type="text" class="span12  empolyName" placeholder="员工姓名" />
+									</div>
+									<div class="searchItem margin-left-0 margin-top-10" id="achievement-phone">
+										<label class="">员工编号:</label>
+										<input type="text" class="span12  salesCode" placeholder="销售编号" />
+									</div>
+									<div class="searchItem margin-top-10" id="achievement-phone">
+										<label class="">手机号:</label>
+										<input type="text" class="span12  salesCode" placeholder="手机号" />
+									</div>
+									
+									<div id="" class="row-fluid searchItem margin-left-0 margin-bottom-0 searchButton" style="">
+									<button type="button" class="button-blue" onclick="search()" >搜索</button>
+								   </div>
+								</div>
+								
+						</div>
+					</div>
+					<div class="main row-fluid ">
+						<div class='row-fluid tabcontent-first'>
+							<div class='span12 box bordered-box green-border' style='margin-bottom:0;'>
+								<div class='box-content box-no-padding'>
+									<div class='responsive-table' >
+										<div class='scrollable-area' >
+											<table class='table table-bordered table-hover table-striped ' style='margin-bottom:0;'>
+												<thead>
+													<tr>
+														<th>系统序号</th>
+														<th>（部门）团队|门店</th>
+														<th>人员编号</th>
+														<th>姓名</th>
+														<th>手机号</th>
+														<th>业绩总量（万元）</th>
+														<th>预期提成（元）</th>
+														<th>操作</th>
+													</tr>
+												</thead>
+												<tbody id="achievement-tbody">
+												</tbody>
+											</table>
+											<div class="emptyTable ">暂无数据</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row-fluid space-div" ></div>
+						<!--翻页-->
+						<div class="row-fluid  page text-center pageBox">			                  
+			                  <div class="box M-box3 m-style hidden-xs" style="height: 36px;" id="box"></div>
+		                </div>
+					</div>
+					
+				</div>
+			</div>
+			
+			
+			
+			<!--详情-->
+			<div class="span12 achievementDetails hide" >
+				销售员工 <span class="name" >王光亮</span> <span class="color-gray" id="">2018-01-01</span>- <span class="color-gray">2018-12-31</span>
+				<span class="color-gray">销售合计</span><span class="color-gray" id="total">100000.00</span> <span class="color-gray">/ 提成合计</span> <span class="color-gray" id="">200.00</span>
+			</div>
+			<div class='row-fluid achDetailsTable hide'>
+				<div class='span12 box bordered-box green-border' style='margin-bottom:0;'>
+					<div class='box-content box-no-padding'>
+						<div class='responsive-table'>
+							<div class='scrollable-area'>
+								<table class='table table-bordered table-hover table-striped ' style='margin-bottom:0;'>
+									<thead>
+										<tr>
+											<th>订单编号</th>
+											<th>订单时间</th>
+											<th>客户姓名 | 证件号</th>
+											<th>手机号</th>
+											<th>订单金额（元）</th>
+											<th>销售渠道</th>
+											<th>销售背景</th>
+											<th>产品利息 | 利率</th>
+											<th>业绩提成</th>
+											<th>实际提成（元）</th>
+										</tr>
+									</thead>
+									<tbody id="achievement-detail-tbody">
+										
+										<!--<tr>
+											<td>1</td>
+											<td>2019-03-22 12:21:34</td>
+											<td>刘** | 1234</td>
+											<td>123****1111</td>
+											<td>122,210.00</td>
+											<td>i投</td>
+											<td>秋收行动</td>
+											<td>智能投0912期 | 5.8%</td>
+											<td>0.1%</td>
+											<td>1233</td>
+										</tr>-->
+									</tbody>
+								</table>
+								<div class="emptyTable ">暂无数据</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+					
+					
+			
+			
+			<!--<div class="row" style="margin-bottom: 100px; height: 500px;"> </div>-->
+					
+					
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+	</div>
+
+	</section>
+</div>
+
+
+<!--#include file = "/view/layout/foot.html" -->
+<!--#include file = "/view/layout/foot-script.html" -->
+<script src='../../js/view/performanceManagement/achievement.js' type='text/babel'></script>
+
+</body>
+</html>
+<script>
+</script>

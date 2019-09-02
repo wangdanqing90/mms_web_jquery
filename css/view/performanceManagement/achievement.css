@@ -1,0 +1,80 @@
+.table th, .table td{
+	text-align: center;
+	white-space: nowrap;
+}
+.achievementDetails{
+	line-height: 28px;
+	margin-bottom: 5px;
+	font-weight: normal;
+}
+.achievementDetails .name{
+	font-weight: bolder;
+	font-size:18px;
+}
+.achievementDetails .color-gray{
+	color: gray;
+	font-size: 14px;
+	font-style: italic;
+}
+.achievement-tab{
+	overflow: hidden;
+	padding: 0 2%;
+}
+.achievement-tab .box div{
+	width: calc(33.33% - 2px);
+	float: left;
+	line-height: 36px;
+	height: 36px;
+	font-size: 16px;
+	text-align: center;
+}
+.achievement-tab .box div:nth-child(2){
+	border-left : none;
+	border-right: none;
+}
+.achievement-tab .box .active{
+	background-color: #0294FF;
+	color: white;
+}
+
+.button-bulebg{
+	background-color: none;
+	color: #0294FF;
+	border: 1px solid #0294FF;
+}
+.row-fluid .table-title{
+	padding: 0 2%;
+}
+
+.searchButton{margin-left:50px;float: left;margin-top: 20px;}
+
+.button-blue-small{padding: 0;}
+#searchBoxCointer{
+	padding: 30px 0;
+}
+.button-active{
+	border-radius: 4px;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    min-width: 110px;
+    padding: 0 10px;
+    background-color: #0294FF;
+    color: white;
+    border: 1px solid #0294FF;
+}
+.headerTitle{
+	/*color:  #000000;*/
+	font-family: PingFangSC-Regular;
+	font-size: 17px;
+	color: #354052;
+	font-weight: normal;
+}
+
+.achievement-search label{
+	font-size: 12px;
+    color: #7F8FA4;
+    height: 12px;
+    line-height: 12px;
+    padding: 0 0 8px 0;
+}

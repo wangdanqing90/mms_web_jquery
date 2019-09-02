@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+		<!--#include file = "/view/layout/head-script.html" -->
+		<!--<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>-->
+		<link rel="stylesheet" type="text/css" href="/css/view/layout/sign.css"/>
+</head>
+
+<body class='contrast-red sign-in contrast-background'>
+<div id='wrapper'>
+    <div class='application'>
+        <div class='application-content'>
+            <a href="javaScript:void(0)"><div class='icon-heart'></div>
+                <span>营销管理平台</span>
+            </a>
+        </div>
+    </div>
+    <div class='controls'>
+        <div class='caret'></div>
+        <div class='form-wrapper'>
+            <h1 class='text-center'>登录</h1>
+            <form />
+            <div style="margin:0;padding:0;display:inline">
+            	<input name="utf8" type="hidden" value="&#x2713;" /></div>
+                <div class='row-fluid'>
+                    <div class='span12 icon-over-input'>
+                        <input class="span12" id="username" name="username" placeholder="用户名" type="text" value=""  autocomplete="on" />
+                        <i class='icon-user muted'></i>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class='row-fluid margin-top-20'>
+                    <div class='span12 icon-over-input'>
+                        <input class="span12" id="password" name="password" placeholder="密码" type="password" value="" />
+                        <i class='icon-lock muted'></i>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <!--<div class="row-fluid margin-top-20 hide">
+                	 <div class='span12 '>
+                        <input class="span8 pull-left" id="imgCatch" name="imgcatch" placeholder="图形验证码" type="text" value="" />
+                        <i class='pull-right'><a href="javaScript:void(0);" ><img class="img" onclick="changeImg(this);" src="" alt="图形验证码"/></a></i>
+                    </div>
+                </div>-->
+                <div class="clearfix"></div>
+                <div class="row-fluid margin-top-20">
+	                <label class="checkbox" for="remember_me"><input id="remember_me" name="remember_me" onclick="change(this)" type="checkbox" value="1" checked="checked" style="height: auto!important;" />
+	                   		 记住登录账号
+	                </label>
+                </div>
+                <input class="btn btn-block" name="button" placeholder="登录" type="button" onclick="login();" value="登录">
+            </form>
+            <div class='text-center'>
+                <hr class='hr-normal hide'/>
+                <!--<a href="javaScript:void(0);">重置</a>-->
+            </div>
+        </div>
+    </div>
+    
+    <div class='login-action text-center'>
+        <a href="javaScript:void(0);"><i class='icon-user'></i>
+            Copyright 
+            <strong>© 2015 - 2019　中民投</strong>
+        </a>
+    </div>
+</div>
+
+
+
+<!--#include file = "/view/layout/foot-script.html" -->
+<script src='../../plugins/jquery/Base64/jquery.base64.js' type='text/javascript'></script>
+<script src='../../js/view/sign/login.js' type='text/javascript' type="text/babel"></script>
+</body>
+</html>

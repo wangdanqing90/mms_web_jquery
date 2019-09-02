@@ -1,0 +1,29 @@
+.table th, .table td{
+	text-align: center;
+}
+
+.space-div{height: 20px;}
+#modal-role-tbody td button:nth-child(1){margin-right:20px ;}
+#model-change-inform span,#model-change-inform button{vertical-align: middle;}
+#model-add .form-error{    margin-left: 180px;position: absolute;bottom:-10px;left:0px;}
+#model-create .form-error{    margin-left: 180px;position: absolute;bottom:-10px;left:0px;}
+.modal.fade {
+    top: -100%;
+    -webkit-transition: opacity 0.3s linear, top 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, top 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, top 0.3s ease-out;
+    transition: opacity 0.3s linear, top 0.3s ease-out;
+}
+.control-label >span{
+	color: red;	
+	font-weight: bolder;
+}
+.form-horizontal input{
+	text-align: center;
+}
+
+input,textarea{width: 80%;}
+#create-organize button{font-size: 16px;height: 40px;line-height: 40px;padding: 0 16px;letter-spacing:1.5px;width: 100px;}
+#create-organize button:nth-of-type(1){background-color: #00A0EA;color:white;margin-right:50px ;}
+#create-organize .form-error{margin-left: 180px;position: absolute;bottom:20px;left:0px;}
+#create-organize form{position: relative;padding:0 0 40px 0 ;}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<!--#include file = "/view/layout/head-script.html" -->
+		<link rel="stylesheet" type="text/css" href="/plugins/jquery/jedate/jedate.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/view/layout/sign.css"/>
+
+	</head>
+		<style type="text/css">
+				.form-horizontal  .searchBox .searchItem input,.form-horizontal  .searchBox .searchItem select{border-radius: 4px !important;}
+				.span6 .span12{max-width: 300px;}
+				.span6 .span10{max-width: 293px;min-width: 170px;}
+				.error{border:1px solid red!important;}			
+            
+              .box-content .searchBox {padding:  0;}
+
+
+</style>
+	<body class='contrast-red' id="main">
+		<!--#include file = "/view/layout/head.html" -->
+		<!--#include file = "/view/layout/left-nav.html" -->
+		<section id='content' class="padding-0">
+			<!--#include file = "/view/layout/header.html" -->
+			<div class='container-fluid text-center'>					
+				<div class='row-fluid'>
+						<div class='span12'>
+							<div class='header'>									
+								<div class='pull-left'>
+									<ul class='breadcrumb '>
+										<li class='active'>销售订单管理</li>
+										<li class='active'>></li>
+										<li class='active'>订单补录</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="box-content user-info">
+					<form class="form-horizontal " role="form">
+						<div class="row-fluid oderSearch searchBox text-left" style="white-space: nowrap;" >							
+							<div class="table-title" style="height: 40px;line-height: 30px;">订单信息:</div>				
+							<div  class="clearfix">
+								<div class="searchItem">
+									<div >订单编号(必填):</div>
+									 <input name="orderNum" class="orderNum  span12" placeholder="订单编号" type="text" >
+								</div>
+								<div class="searchItem">
+									<div>订单日期(必填):</div>
+									<input type="text" name="orderTime" onfocus="this.blur()" placeholder="订单日期" class="span12  date  orderTime" value="" />
+								</div>
+								
+								<div class="searchItem margin-top-10">
+									<div>订单金额(元/必填):</div>
+									<input  name="orderMonely" onkeyup='$.upperCase(this)'class="orderMonely span12"  placeholder="订单金额(元)" type="text">
+								</div>
+								<div class="searchItem margin-top-10">
+									<div>订单类型:</div>
+									<select class='span12 orderType' name="orderType">
+					                </select>
+								</div>
+								
+								<div class="searchItem margin-top-10">
+									<div>订单渠道:</div>
+									<select class=' orderChannel span12'  name="orderChannel">
+					                </select>
+					             </div>
+								<div class="searchItem margin-top-10">
+									<div>预期收益(元/必填):</div>
+									<input name="expected" onkeyup='$.upperCase(this)' class="expected span12"  placeholder="预期收益(元)" type="text" >
+								</div>
+								<div class="searchItem margin-top-10">
+									<div>订单状态:</div>
+									<select class='status span12' name="status">
+					                </select>
+								</div>
+							</div>
+							<div class="table-title margin-top-20" style="height: 40px;line-height: 30px;">客户信息:</div>
+							<div class="clearfix">
+								<div class="searchItem">
+									<div>客户姓名(必填):</div>
+									<input type="text" name="customerName" class=" customerName span12" placeholder="客户姓名" value="" />
+								</div>
+								<div class="searchItem">
+									<div>来源方式:</div>
+									<input type="text" class="span12"  value="补录" readonly name="laiyuan"/>
+								</div>
+								
+								<div class="searchItem margin-top-10">
+									<div>证件类型:</div>
+									<select class='form-control cardType span12' name="cardType">
+					                </select>
+								</div>
+								<div class="searchItem margin-top-10">
+									<div>证件号码(必填):</div>
+									<input type="text" name="customerCard" class="customerCard span12 " placeholder="证件号码" value="" />
+								</div>
+								
+								<div class="searchItem margin-top-10">
+									<div>预留手机号(必填):</div>
+									<input type="text" name="customerPhone" class="customerPhone span12" placeholder="预留手机号码" value="" />
+								</div>
+								<div class="searchItem margin-top-10">
+									<div>注册手机号(必填):</div>
+									<input type="text" name="registerPhone" class="registerPhone span12" placeholder="注册手机号码" value="" />
+								</div>
+								
+								<div class="searchItem margin-top-10">
+									<div>银行名称(必填):</div>
+									<input type="text" name="bankType" class="span12 bankType" placeholder="银行名称" value="" />
+								</div>
+								<div class="searchItem margin-top-10">
+									<div>银行卡号(必填):</div>
+									<input type="text" name="customerBank" class="customerBank span12 " placeholder="银行卡号" value="" />
+								</div>
+							</div>
+							
+							<div class="table-title margin-top-20" style="height: 40px;line-height: 30px;">产品信息:</div>
+							<div class="clearfix">
+								<div class="searchItem margin-top-10">
+									<div>产品编号(必填):</div>
+									<input type="text" name="productNum" class="span12  productNum" placeholder="产品编号" value="" />
+								</div>
+								<div class="searchItem margin-top-10">
+									<div>产品名称:</div>
+									<input type="text" name="productName" class="span12 productName" placeholder="产品名称" value="" readonly="readonly"/>
+								</div>
+								
+								<div class="searchItem margin-top-10">
+									<div>存续期(天):</div>
+									<input type="text" name="productDay" class="span12 productDay" placeholder="存续期" value="" readonly="readonly"/>
+								</div>
+								<div class="searchItem margin-top-10">
+									<div>年利率:</div>
+									<input type="text" name="productRate" class="span12 productRate" placeholder="年利率" value=""readonly="readonly" />
+								</div>
+								
+								<div class="searchItem margin-top-10">
+									<div>起息日:</div>
+									<input type="text" class="span12 valueDate " onfocus="this.blur()" placeholder="起息日" value=""readonly="readonly" name="valueDate"/>
+								</div>
+								<div class="searchItem margin-top-10">
+									<div>产品兑付日:</div>
+									<input type="text" class="span12 repayDate " onfocus="this.blur()" placeholder="产品兑付日" value="" readonly="readonly" name="repayDate"/>
+								</div>
+																							
+							</div>
+							
+							<div class="clearfix"></div>
+							<div class="row-fluid  ">
+								<div class="control-group  text-center">
+								 <input type="button"  class="button-blue btn_change_datasource"   name="btn" onclick="submitForm();"  value="确认补录"  />
+								  <input type="button"  class="button-white margin-left-24" name="btn" onclick="black();"  value="返回"/>
+							
+								</div>
+							</div>
+							
+							<div class="row-fluid text-center">
+								<div class="span3">
+									<div class="control-group ">
+	                                    <input class="button-blue" type="button" name="btn" onclick="updatefile('one')" value="基础模板下载(东金)" />
+                                	</div>
+								</div>
+								<div class="span3">
+	                                <div class="control-group ">
+	                                	<input class="button-blue" type="button" name="btn" onclick="updatefile('two')" value="基础模板导入(东金)"/>
+                                	</div>
+								</div>
+								<div class="span3">
+	                                <div class="control-group ">
+	                                	<input class="button-blue" type="button" name="btn" onclick="updatefile('three')" value="下载模板文件(东金)" />
+                                	</div>
+								</div>	
+								<div class="span3">
+	                                <div class="control-group ">
+	                                	<input class="button-blue" type="button" name="btn" onclick="updatefile('four')"  value="导入文件(东金)" />
+                                	</div>
+								</div>	
+							</div>	
+						</div>	
+					</form>
+                </div>
+			</div>
+		</section>
+		
+		
+		<!--导入文件-->
+				<div id="model-upload" class="modal fade" tabindex="-1" role="dialog">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title">选择文件</h4>
+							</div>
+							<div class="modal-body">
+								<div class='row-fluid'>
+									<a href="javascript:;" class="file" onclick="upload()">选择文件
+									</a>											
+									<input type="file" name="file" id="fileId" onchange="filechange(this) " accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+								<button type="button" class="btn btn-primary" onclick="check()">导入</button>
+							</div>
+						</div>
+					</div>
+				</div>
+		<!--#include file = "/view/layout/foot.html" -->
+		<!--#include file = "/view/layout/foot-script.html" -->
+</body>
+</html>	
+<script src="/plugins/jquery/jedate/jquery.jedate.min.js"></script>
+<script src="/js/view/order/orderPatch.js" type="text/javascript"></script>

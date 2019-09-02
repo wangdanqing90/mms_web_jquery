@@ -1,0 +1,39 @@
+.table th, .table td{
+	text-align: center;
+	white-space: nowrap;
+}
+
+#modal-role-tbody td button:nth-child(1){margin-right:20px ;}
+#model-change-inform span,#model-change-inform button{vertical-align: middle;}
+#model-add .form-error{    margin-left: 180px;position: absolute;bottom:-10px;left:0px;}
+.modal.fade {
+    top: -100%;
+    -webkit-transition: opacity 0.3s linear, top 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, top 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, top 0.3s ease-out;
+    transition: opacity 0.3s linear, top 0.3s ease-out;
+}
+.zubiaoshi{
+	overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}
+
+table tr .zubiaoshi{
+	max-width: 150px!important;
+}
+.searchButton{float: left;}
+.button-blue-small{padding: 0;}
+.searchBox{
+	padding-bottom: 20px;
+}
+.unEmpolyee{
+	color: #7F8FA4;;
+}
+.row-fluid #searchBoxCointer label{
+	font-size: 12px!important;
+    color: #7F8FA4!important;
+    height: 12px;
+    line-height: 12px;
+    padding: 0 0 8px 0;
+}

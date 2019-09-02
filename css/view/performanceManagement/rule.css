@@ -1,0 +1,83 @@
+
+.table th, .table td{
+	text-align: center;
+}
+
+#wrapper{min-height: auto;}
+#wrapper,#content,.container-fluid,#content-wrapper,#content-wrapper>div:first-child{height:calc(100% - 35px);}
+#content{overflow-y: auto;}
+input,textarea{width: 80%;}
+.li-select{background-color: #00A0EA;}
+
+
+/*文件树*/
+.treebox-cointer,#create-person{ height: 100%; }
+#treebox button {font-size: 16px;height: 40px;line-height: 40px;padding: 0 16px;letter-spacing: 1.5px;width: 200px;background-color: #00A0EA;color: white;
+                  margin-right: 50px;border:none;margin: 0 auto;}
+.treeButtonCointer{text-align: center;padding: 10px 0 0 0;position: relative;}
+.treeButtonCointer div{position: absolute;top:10px;right:0;font-size: 16px;height: 40px;line-height: 40px;padding: 0 16px;letter-spacing: 1.5px;color:#00A0EA;}
+
+/*详情*/
+#detail-inform{text-align: center;}
+#detail-inform .btn-change,#newCointer .btn-change{width:100px;font-size: 16px;height: 40px;line-height: 40px;padding: 0 16px;letter-spacing:1.5px;}
+#detail-inform .btn-change:nth-of-type(1),#newCointer .btn-change:nth-of-type(1){background-color: #00A0EA;color:white;margin: 0 20px 20px 0;}
+#detail-inform .btn-change:nth-of-type(2),#newCointer .btn-change:nth-of-type(2){background-color: #cccccc;color:white;margin: 0 0 20px 0;}
+#detail-inform .title{font-size: 20px;padding: 0 0 20px 0;}
+#detail-tbody span{padding:0 5px;}
+#detail-inform .detail-tip{text-align: right;color:#cccccc;padding: 0px 10px 20px 0;}
+
+
+
+
+
+
+/*新建*/
+.organizeTab{
+	overflow: hidden;
+}
+.organizeTab > .inp{
+	float: left!important;
+	margin: 0!important;
+}
+
+.organizeTab button{
+	float: left;
+	margin: 0!important;
+	border-left: none;
+}
+
+
+#new-org ul,#new-person ul{background-color: white;max-height:calc(100% - 25px);overflow:auto;border: 1px solid #dddddd;border-radius: 5px;margin: 0px;}
+#new-org li,#new-person li{font-size: 16px;padding: 10px 10px;}
+.li-select{background-color: #00A0EA;}
+
+
+.row-fluid .transferOk, .row-fluid .transferReset{
+	border-radius: 5px!important;
+}
+.row-fluid .optionButton{
+	float: left;
+	margin-left: 0px;
+	border-left: none;
+}
+
+.addTransfer, .addSave{
+	line-height: 40px;
+	border: 1px solid #CCCCCC;
+	box-sizing: border-box;
+}
+
+.checkbox{
+    display: inline-block;
+    float: left;
+    min-height: 30px;
+    margin-left: 2.127659574468085%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left:20px ;
+}
+
+
+
+

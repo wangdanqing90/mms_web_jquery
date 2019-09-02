@@ -1,0 +1,115 @@
+.row-fluid>.span4 {
+	padding: 26px 5px 26px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 4px;
+}
+
+.number {
+	font-size: 32px;
+	line-height: 54px;
+	vertical-align: middle;
+	color: #FFF;
+}
+
+.span4 p {
+	text-align: left;
+	color: #FFF
+}
+
+.row-fluid .span4 {
+    width: 32.33333333%;
+}
+.row-fluid [class*="span"]{
+	margin-left: 1.5%;
+}
+
+.blue {
+	background: #0294FF;
+}
+
+.orange {
+	background: #FECA34;
+}
+
+.red {
+	background: #FF475B;
+}
+
+.pieOutCointer{
+	background-color: white;
+	padding: 24px 0;
+	box-sizing: border-box;
+	border-radius: 4px;
+}
+.pieOutCointer .title{
+	padding-left:24px ;
+}
+.pieOutCointer .title,.barOutCointer .title{
+	font-size: 16px;
+	color: #000000;
+}
+.circle{
+width:10px;
+height:10px;
+background-color:#E7EBEF;
+border-radius:5px; /* 图形的半径 */
+display: inline-block;
+margin-right:5px ;
+}
+
+.circle2{
+width:10px;
+height:10px;
+background-color:#FDC581;
+border-radius:5px; /* 图形的半径 */
+display: inline-block;
+margin-right:5px ;
+}
+
+.piecointer{
+	color: #7F8FA4;
+	font-size: 12px;
+	padding-left:24px;
+	    box-sizing: border-box;
+}
+
+.barOutCointer .title{
+	padding-bottom: 10px;
+}
+.pieOutCointer .title{
+	padding-bottom: 14px;
+}
+.piecointer{
+	float: left;
+	height: 100%;
+	width: 33%;
+}
+#leftcontainer,#middlecontainer,#rightcontainer{
+	float: left;
+	height: 72px;
+	width: 72px;
+}
+
+#leftdata,#middledata,#rightdata{
+	float: left;
+	padding: 14px 0 14px 10px;
+
+}
+
+.piecointer .line{
+	float: right;
+	width: 1px;
+	height: 72px;
+	background-color: #DFE3E9;
+	margin: 0;
+}
+
+.barOutCointer{
+	background-color: white;
+	padding: 24px 24px 0 24px ;
+	box-sizing: border-box;
+	border-radius: 4px;
+	margin-bottom: 20px;
+}
+

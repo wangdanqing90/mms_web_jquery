@@ -1,0 +1,87 @@
+/* 修改样式的css 多半是覆盖*/
+
+#main-nav-bg{
+	width: 180px;
+	background: #262935;
+}
+
+
+.main-nav-opened #main-nav-bg{
+	width: 180px;
+}
+#main-nav{
+	width: 180px;
+	scrollbar-width: none;
+}
+.main-nav-closed  .head-title{
+	display: none;
+}
+.text-center{
+	text-align: center!important;
+}
+
+.main-nav-opened #main-nav{
+	width: 180px;
+}
+.main-nav-opened #content{margin-left: 181px;}
+#content{margin-left: 181px;}
+#main-nav-opened #content{
+	margin-left: 181px;
+}
+#main-nav .navigation > .nav {background: #262935;border: none;overflow: hidden;}
+#main-nav .navigation > .nav > li .nav{background: #262935;border: none;}
+#main-nav .navigation > .nav > li > a span {color: #7F8FA4; text-shadow:none;font-size: 14;}
+#main-nav .navigation > .nav > li > a{background: #262935;border:none;height: 50px;
+    line-height: 50px;padding: 0 0 0 10px}
+
+#main-nav .navigation > .nav > li:hover > a span, #main-nav .navigation > .nav > li:focus > a span, #main-nav .navigation > .nav > li.active > a span {
+    color: #fff !important;
+    padding-left: 2px !important;
+}
+#main-nav .navigation > .nav > li:hover > a, #main-nav .navigation > .nav > li:focus > a, #main-nav .navigation > .nav > li.active > a{
+	background: #262935;color: #FFFFFF;
+}
+#main-nav .navigation > .nav > li > .nav > li > a {
+    border: none;
+    margin-left: 9px;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 34px;
+    text-indent: 32px;
+ }
+.left-nav a,.left-nav a:hover,.left-nav .btn-link,.left-nav .btn-link:hover{font-size: 14px;color: #7F8FA4;letter-spacing: 0;line-height: 14px;}
+
+#main-nav .navigation > .nav > li > a.in span{color: #FFf;}
+
+.contrast-red #main-nav .navigation > .nav > li:hover > a [class^="icon-"], .contrast-red #main-nav .navigation > .nav > li:hover > a [class*=" icon-"], .contrast-red #main-nav .navigation > .nav > li:focus > a [class^="icon-"], .contrast-red #main-nav .navigation > .nav > li:focus > a [class*=" icon-"], .contrast-red #main-nav .navigation > .nav > li.active > a [class^="icon-"], .contrast-red #main-nav .navigation > .nav > li.active > a [class*=" icon-"] {
+    color: #FFFFFF !important;
+}
+.contrast-red #main-nav .navigation > .nav > li > a.in [class^="icon-"], .contrast-red #main-nav .navigation > .nav > li > a.in [class*=" icon-"] {
+    color: #fff;
+}
+.icon-caret-down-right{width: 10px!important;margin:0!important;font-size: 14px!important;vertical-align: 2px!important;}
+#main-nav .navigation > .nav > li .nav > li > a:hover, #main-nav .navigation > .nav > li .nav > li > a:focus {background-color:#262935;}
+.container-fluid{padding-left: 10px;padding-right: 10px;}
+.nav .dropdown-toggle .caret {
+    border-top-color: #7F8FA4!important;
+    border-bottom-color: #7F8FA4!important;
+}
+.nav li.dropdown.open .caret, .nav li.dropdown.open.active .caret, .nav li.dropdown.open a:hover .caret, .nav li.dropdown.open a:focus .caret{
+	/*border-bottom: 4px solid #005580;*/
+	border-bottom: 4px solid #7F8FA4;
+	border-top:none;
+}
+
+
+#main-nav .navigation .left-open>a{background-color: #131720 !important;}
+#main-nav .navigation .left-open a i,#main-nav .navigation .left-open>a>span{color: white !important;}
+#main-nav .navigation .left-select span{color: white !important;}
+
+.contrast-red .daterangepicker td.active, .contrast-red .daterangepicker td.active:hover {
+    background: #0294FF;
+}
+.daterangepicker td.active, .daterangepicker td.active:hover {
+    background: #0294FF;
+}
+
+

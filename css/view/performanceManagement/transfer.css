@@ -1,0 +1,268 @@
+/*重置*/
+/*ul{margin: 0!importent;}*/
+.table th, .table td{
+	text-align: center;
+	white-space: nowrap;
+}
+.right{
+	float: right;
+}
+.left{
+	float: left;
+}
+
+/*重写样式*/
+.row-fluid .box .box-content{
+	border-radius: 0;
+	box-sizing: border-box;
+	height: 100%;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+.box .box-content{
+	padding: 32px 24px 36px 24px;
+}
+#search-organize, #changeSpanPerson{
+	margin-left: 0;
+}
+label{
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #7F8FA4;
+	margin-bottom: 7px;
+}
+
+input[type="text"]{
+	font-family: Helvetica;
+	font-size: 14px;
+	/*color: #9FA9BA;*/
+	color: #354052;
+	text-align: left;
+	line-height: 36px!important;
+	height: 36px;
+	border-radius: 4px!important;
+	/*outline: none!important;
+	-webkit-appearance: none!important;
+	border: 0!important;*/
+}
+.chooseWay{
+	margin-top: 22px;
+}
+.space-div{height: 20px;}
+.organizeTab{
+	/*width: 100%;*/
+	overflow: hidden;
+}
+.organizeTab > .inp{
+	float: left!important;
+	margin: 0!important;
+	width: 100%;
+	text-align: center;
+}
+
+.organizeTab button{
+	float: left;
+	margin: 0!important;
+	border-left: none;
+}
+
+::-webkit-scrollbar {display:none}
+.button-transfer{
+	/*float: right;*/
+}
+/*background: #FAFBFC;*/
+#create-organize-li{min-height: 0px;border-left: 1px solid #E6EAEE;border-right: 1px solid #E6EAEE;border-bottom: 1px solid #E6EAEE;max-height:calc(100% - 0px);-ms-overflow-y:scroll; overflow: auto; list-style:none;border-radius: 5px;margin: 0px;}
+#create-organize-li li{font-size: 12px;padding: 10px 10px;border-bottom: 1px solid #E6EAEE;}
+#create-person-li, #create-personDetail-li{min-height: 0px;border-left: 1px solid #E6EAEE;border-right: 1px solid #E6EAEE;border-bottom: 1px solid #E6EAEE;max-height:calc(100% - 0px);overflow: auto; list-style:none;border-radius: 5px;margin: 0px;}
+#create-person-li li, #create-personDetail-li li{white-space: nowrap;font-size: 12px;padding: 10px 10px;border-bottom: 1px solid #E6EAEE;}
+#create-person-li li:hover, #create-personDetail-li li:hover, #create-organize-li li:hover{
+	background: #eceded;
+}
+#create-person-li li::focus, #create-organize-li li::focus{
+	background: #eceded;
+}
+#create-person>div:first-child,#create-person form{/*height: 100%;*/}
+.li-select{background-color: #00A0EA;}
+.showul{
+	background: white;
+	border: 1px solid #ddddddd;
+}
+
+.row-fluid .chooseTime{
+	margin: 10px 0;
+	
+}
+.row-fluid .transferTime{
+	border-radius: 5px!important;
+	outline: none;
+	text-align: center;
+}
+
+.row-fluid .chooseTime span{
+	font-weight: bold;
+	font-size: 16px;
+}
+.row-fluid .transferOk, .row-fluid .transferReset{
+	border-radius: 5px!important;
+}
+.row-fluid .transferOk{
+	border-radius: 4px;
+    font-size: 12px;
+    height: 36px;
+    line-height: 36px;
+    min-width: 110px;
+    padding: 0 10px;
+    background-color: #0294FF;
+    color: white;
+    border: 1px solid #0294FF;
+}
+.optionButton {
+	text-align: center;
+}
+.optionButton button{
+	border-radius: 4px;
+	text-align: center;
+}
+.button-orange{
+	background: #FFAF00;
+	color: white;
+}
+.addTransfer, .addSave{
+	line-height: 36px;
+	border: 0px;
+	box-sizing: border-box;
+	height: 36px;
+	font-size: 12px;
+	opacity: .5;
+	fill-opacity: 50;
+	outline: none;
+	
+}
+.row-fluid .order{
+	width: 50px;
+	display: inline-block;
+}
+
+/*重写样式*/
+.emptyTable{
+	height: 50px;
+	line-height: 50px;
+}
+
+
+/*right*/
+#transfer-Right{
+	background: #FAFBFC;
+	/*border: 1px solid #E6EAEE;*/
+	border-top-right-radius: 4px!important;
+	border-bottom-right-radius: 4px!important;
+}
+
+.headerTitle{
+	color:  #000000;
+}
+
+.row-fluid table{
+	padding: 0;
+}
+.transfer-option,.transfer-option > span , .orderBox, .emptyTable {
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #7F8FA4;
+	line-height: 17px;
+}
+.orderBox-content{
+	padding: 0;
+	list-style: none;
+	margin: 0 !important;
+}
+.transfer-button{
+	text-align: right;
+}
+#transfer-Right .headerTitle{
+	font-family: PingFangSC-Regular;
+	font-size: 17px;
+	color: #354052;
+	font-weight: normal;
+}
+.row-fluid .table-bordered th, .row-fluid .table-bordered td{
+	text-align: center;
+	white-space: nowrap;
+	height: 47px;
+	line-height: 47px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #FAFBFC;
+    border-radius: 10px;
+    border: 2px solid #FAFBFC;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #FAFBFC;
+}
+.box{
+	margin-bottom: 0;
+}
+input[type='checkbox']{
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    -webkit-appearance:none;
+    background: url("../../../img/unsel.png")no-repeat center;
+    background-size:18px 18px;
+	border: 0!important;
+	box-shadow: none!important;
+}
+input[type=checkbox]:checked{
+   	background: url("../../../img/sel.png")no-repeat center;
+    background-size:18px 18px;
+    outline: none;
+}
+input[name='searchRadio']{
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    margin-right: 5px;
+    background-color: #fff;
+    -webkit-appearance:none;
+    background: url("../../../img/performance/Radiobutton_No.png")no-repeat center;
+    background-size:18px 18px;
+    border: 0!important;
+    box-shadow: none!important;
+}
+input[name='searchRadio']:checked{
+	 border-radius: 9px;
+	 margin-right: 5px;
+   	background: url("../../../img/performance/Radiobutton_Yes.png")no-repeat center;
+    background-size:18px 18px;
+    outline: none;
+}
+.row-fluid .transferRight{
+	background: #FAFBFC;
+	border: 1px solid #E6EAEE;
+	border-top-right-radius: 4px!important;
+	border-bottom-right-radius: 4px!important;
+}
+.deleteBtn{
+	width: 42px;
+	height: 32px;
+	background: url("../../../img/performance/Delete_button.png")no-repeat center;
+    background-size:42px 32px;
+    border: none;
+}
+.daterangepicker .ranges input{
+	/*box-sizing: border-box;*/
+	height: 36px;
+	padding: 0 5px;
+}
+.daterangepicker.dropdown-menu{
+	top: 50%!important;
+}
+.button:hover,.button:focus {text-decoration: none;color: #0294FF!important;}
+.radio, .checkbox{
+	margin-left: 0px!important;
+}
+.button-blue{
+	min-width:0!important;
+}

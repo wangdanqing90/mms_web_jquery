@@ -1,0 +1,197 @@
+<!--角色维护-->
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<!--#include file = "/view/layout/head-script.html" -->		
+		<link rel="stylesheet" href="../../css/view/PrivilegeManagement/RoleMaintenance.css" />
+
+	</head>
+
+	<body class='contrast-red ' id="main">
+	<!--#include file = "/view/layout/head.html" -->
+	<!--#include file = "/view/layout/left-nav.html" -->
+		<section id='content'>
+			<!--#include file = "/view/layout/header.html" -->
+			<div class='container-fluid'>
+				<div class='row-fluid' id='content-wrapper'>
+					<div class='span12'>
+						<div class='row-fluid'>
+							<div class='span12'>
+                                <div class='header'>									
+									<div class='pull-left'>
+										<ul class='breadcrumb '>
+											<li class='active'>权限管理</li>
+											<li class='active'>></li>
+											<li class='active'>角色维护</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					<div class="row-fluid searchBox">
+						<div id="searchBoxCointer" class="clearfix">
+							    <div class="table-title">查找条件</div>
+								<div class=" searchItem margin-bottom-30 ">
+									<div>查找角色名</div>
+									<input type="text" name="valueDate" class=" span12" placeholder="" autocomplete="off" id="search-input">
+								</div>
+							    
+							    <div class=' searchButton' style="margin-left:24px;">
+								    <button  class="button-white" onclick="addNewUser(this)">新增角色</button>
+							    </div>
+							    
+							    <div class='searchButton' style="margin-left:16px;">
+								    <button  class="button-blue" onclick="searchBtn()">搜索</button>
+							    </div>
+						</div>
+					</div>
+
+						<div class='row-fluid '>
+							<div class='span12 box bordered-box green-border' style='margin-bottom:0;'>
+								<div class='box-content box-no-padding'>
+									<div class='responsive-table'>
+										<div class='scrollable-area'>
+											<table class='table table-bordered table-hover table-striped ' style='margin-bottom:0;'>
+												<thead>
+													<tr>
+														<th>角色ID</th>
+														<th>角色名</th>
+														<th>组标识</th>
+														<th>状态</th>
+														<th>操作</th>
+													</tr>
+												</thead>
+												<tbody id="role-tbody">
+
+												</tbody>
+												
+											</table>
+											<div class="emptyTable hide">暂无数据</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row-fluid space-div" ></div>
+						<!--翻页-->
+						<div class="row-fluid  page text-center">			                  
+			                  <div class="box M-box3 m-style hidden-xs" style="height: 36px;" id="box"></div>
+		                </div>
+					</div>
+				</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+
+
+            <!--修改按钮弹框-->
+			<div id="model-change" class="modal fade" tabindex="-1" role="dialog" >
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title">角色资源组信息</h4>
+						</div>
+						<div class="modal-body">
+							<div class='row-fluid'>
+								<div id="model-change-inform" class='span12 box bordered-box green-border' >
+									<div class="pull-left">
+										<div>角色</div>
+										<div id="model-change-roleName"></div>
+									</div>
+
+									<div class="pull-left">
+										<div>角色状态</div>
+										<div ><img id="role-status-img" onclick='confirmRole()' ><span id="model-change-state"></span></div>
+									</div>
+								</div>
+
+
+							   <div class='span12 box bordered-box green-border ' style='margin-bottom:0;margin-left:0'>
+								<div class='box-content box-no-padding'>
+									<div class='responsive-table'>
+										<div class='scrollable-area'>
+											<table class='table table-bordered table-hover table-striped ' style='margin-bottom:0;'>
+												<thead>
+													<tr>
+														<th>资源组</th>
+														<th>授权状态</th>
+														<th>操作</th>
+													</tr>
+												</thead>
+												<tbody id='modal-role-tbody'>
+
+												</tbody>
+												<div class="emptyTable hide">暂无数据</div>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<!--新增按钮弹框-->
+			<div id="model-add" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title">角色资源组信息</h4>
+						</div>
+						<div class="modal-body">
+			                <div class='row-fluid'>
+                    <div class='span12 box'>               
+                            <form class='form form-horizontal validate-form' id="model-add-form" style='margin-bottom: 0;' />
+                                  <div id="searchBoxCointer" class="clearfix">															
+									<div class=" margin-top-10 searchItem">
+					                   <div >* 角色</div>
+                                        <input id='model-add-roleName' class=""  type='text' />
+					                </div>
+					                
+					                <div class=" margin-top-10 searchItem">
+					                   <div >说明</div>
+                                        <input id='model-add-roleRemark' class=""  type='text' />
+					                </div>
+
+					                <div class='form-error hide'></div>        					               
+							     </div>
+                             
+                                                      
+                           </form>                    
+                    </div>
+                </div>
+						</div>
+						<div class="modal-footer">
+						
+							<button type="button" class="button-blue" onclick="addNewUserCallback()">新增</button>
+							<button type="button" class="button-white margin-left-24"  data-dismiss="modal">关闭</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		</div>
+
+		<!--#include file = "/view/layout/foot.html" -->
+		<!--#include file = "/view/layout/foot-script.html" -->
+		
+		
+	</body>
+
+</html>
+<script>
+</script>
+<script src='/js/view/PrivilegeManagement/RoleMaintenance.js' type='text/babel'></script>

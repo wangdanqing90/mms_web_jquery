@@ -1,0 +1,141 @@
+<!--活动提成参数管理-->
+
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<!--#include file = "/view/layout/head-script.html" -->
+		<link rel="stylesheet" href="../../css/view/performanceManagement/royalty.css" />
+	</head>
+
+	<body class='contrast-red ' id="main">
+		<!--#include file = "/view/layout/head.html" -->
+		<!--#include file = "/view/layout/left-nav.html" -->
+		<section id='content'>
+			<!--#include file = "/view/layout/header.html" -->
+			<div class='container-fluid'>
+				<div class='row-fluid' id='content-wrapper'>
+					<div class='span12'>
+						<div class='row-fluid'>
+							<div class='span12'>
+								<div class='header'>									
+									<div class='pull-left'>
+										<ul class='breadcrumb '>
+											<li class='active'>审核管理</li>
+											<li class='active'>></li>
+											<li class='active'>活动提成审核</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						
+						
+                        <div class="row-fluid oderSearch searchBox" style="white-space: nowrap;" id="royalty-header">
+                        	 <div class="table-title">查找条件<span  class="spanStyle" id="hideOrShow" onclick="hideOrShow()">收起  <i class='icon-angle-down'></i></span> </div>
+							 <div id="searchBoxCointer" class="clearfix">
+							 	<div class="searchItem">
+									<div>创建日期</div>
+									<input type="text" onfocus="this.blur()" id="royalty-header-time" name="daterange" class=" span12" placeholder="开始时间-结束时间" autocomplete="off" >
+								</div>
+							 	
+							 	<div class="searchItem">
+										<div >提成名称</div>
+										<input type="text" class="span12  proName" id="royalty-header-name" placeholder="模糊搜索" autocomplete="off">
+								</div>	
+								
+                                <div class=" margin-top-10 searchItem">
+										<div >创建人</div>
+										<input type="text" class="span12  proName" id="royalty-header-person" placeholder="模糊搜索" autocomplete="off">
+								</div>	
+								
+								<div class="margin-top-10 searchItem" >
+										<div >状态</div>									
+										<select class="s-sales span12" id="royalty-select-state">
+											<option value='' class="hide" /></option>
+											<option value='' selected>全部</option>
+											<option value='ONCHECK'>待审</option>
+											<option value='PASS'>通过</option>
+											<option value='REFUSED'>驳回</option>
+											<option value='INVALID'>废弃</option>
+										</select>											
+								</div>	
+								
+								<div class="margin-top-10 searchItem" >
+										<div >类型</div>									
+										<select class="s-sales span12" id="royalty-select-type">
+											<option value='' class="hide" /></option>
+											<option value='ACTIVE' selected>活动类</option>
+											<option value='PRODUCT_COMMISSION'>产品类</option>
+										</select>											
+								</div>	
+								
+
+								<div class='margin-top-30 margin-bottom-10 searchItem' style="width: 100%;">
+								    <button  class="button-blue" onclick="searchBtn()">搜索</button>
+							    </div>
+							</div>
+						</div>
+
+						<div class='row-fluid '>
+							<div class='span12 box bordered-box' style='margin-bottom:0;'>
+								
+								<div class='box-content box-no-padding'>
+									<div class="table-title">状态绩效参数</div>
+									<div class='responsive-table'>
+										<div class='scrollable-area'>
+											<table class='table table-bordered table-hover table-striped ' style='white-space: nowrap;'>
+												<thead>
+													<tr>
+														<th onclick="allSelect()">全选</th>
+														<th>提成名称</th>
+														<th>提成比例</th>
+														<th>创建人</th>
+														<th>状态</th>
+														<th>类型</th>
+														<th>创建日期</th>
+														<th>操作</th>
+													</tr>
+												</thead>
+												<tbody id="royalty-tbody">
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row-fluid space-div"></div>
+						<!--翻页-->
+						<div class="row-fluid  page text-center">
+							<div class="box M-box3 m-style hidden-xs" style="height: 36px;" id="box"></div>
+						</div>
+						
+						<!--按钮-->
+						<div class="row-fluid   text-center bottom">
+						<div class='control-group' >
+							<button type='button' class="button-blue" onclick="BatchAuditBtn()">批量审核</button>								
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+		</section>
+		</div>
+		<!--#include file = "/view/layout/foot.html" -->
+		<!--#include file = "/view/layout/foot-script.html" -->
+	</body>
+
+</html>
+<script>
+</script>
+<script src='../../js/view/performanceManagement/royalty.js' type='text/babel'></script>

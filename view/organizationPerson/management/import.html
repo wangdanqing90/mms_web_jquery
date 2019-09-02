@@ -1,0 +1,56 @@
+<div class='container-fluid text-center'>
+		<div class='row-fluid'>
+					<div class='span12'>
+						<div class='header'>									
+							<div class='pull-left'>
+								<ul class='breadcrumb '>
+									<li class='active'>组织与人员管理</li>
+									<li class='active'>></li>
+									<li class='active'>人员列表</li>
+									<li class='active'>></li>
+									<li class='active'>人员批量导入</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+		</div>
+	
+		<div class="clearfix"></div>
+	
+		<div class="box-content user-info">
+			<form class="form-horizontal" role="form">
+				<div class="row-fluid oderSearch searchBox text-left" style="white-space: nowrap;" >
+					<div class="table-title" style="height: 40px;line-height: 30px;">人员批量导入</div>	
+					<div class="clearfix"></div>
+					<div  class="clearfix">
+						<div class="row-fluid margin-top-20">
+							<div class="span12 box">
+								<div class="control-group ">
+	                                                               
+	                               <!-- <div class="controls ">                                 	
+											<input type="file" id="input-file-select" onchange="changeFile();"   class="input-file-select" maxlength="1" style="box-shadow: none;width: auto;" />
+	                                		<p class="file-name margin-top-10"></p>
+	                                </div>-->
+	                                
+	                                <div class='row-fluid' style="padding-left:20px ;">
+											<a href="javascript:;" class="file" onclick="upload()">选择文件
+											</a>
+											<input type="file" name="file" id="input-file-select" onchange="changeFile(this) " accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+										</div>
+	                                
+	                        	</div>
+	                        	
+							</div>
+						</div>
+						<div class="clearfix"></div>
+						<div class="row-fluid  text-center">
+							 <input type="button"  class="button-blue" onclick="submitFile();"  value="确认导入"  />
+							 <input type="button"  class=" button-white margin-left-40" onclick="blackIndex();"  value="返回"  />
+						</div>
+					</div>
+				</div>	
+			</form>
+        </div>
+</div>
+
+<script src="/js/view/organizationPerson/management/import.js" type="text/babel"></script>

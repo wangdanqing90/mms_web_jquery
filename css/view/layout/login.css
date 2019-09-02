@@ -1,0 +1,43 @@
+/* 登录样式*/
+html,body{
+	height: 100%;
+	width: 100%;
+	
+}
+.form-nomal input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: rgb(0, 0, 0) !important;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+    -webkit-tap-highlight-color:rgba(0,0,0,0) !important;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+.border-none{border: none!important;}
+
+.login .div-input-group .img-top-right{position: absolute; right: 2px;top: 2px;}
+
+.form-nomal  .div-input-group{ margin-bottom: 24px;border-radius: 2px;background: #fff;border: 1px solid #ccc;}
+.form-nomal  .focus{border:1px solid #2b8fea!important;}
+.form-nomal  .input-no-border{border: none;outline: none;padding-left: 4px;line-height: 24px; width: 90%;height: 24px;}
+.form-nomal .div-error{position: absolute;color: #F4516C;font-size: 12px;bottom: -26px;left: 8px;}
+.font-18{font-size: 18px;}
+
+.login{ height: 100%;width: 100%;position: relative;  background-image: url(/img/view/login/bg.png);background-repeat: no-repeat;background-size: 100% auto;background-position: inherit;padding: 0;}
+.login .form-wrapper{position: absolute;width: 360px; height: 100%;text-align: left;padding-left: 24px;background:rgba(255,255,255,0.74);border-radius: 2px; }
+.login .form-wrapper strong{font-family: PingFangSC-Semibold;font-size: 24px;color: #2991CA;}
+.login .div-input-group{width: 252px;height: 32px;line-height: 30px;position: relative;}
+.login .col-xs-1 img{vertical-align: -4px;margin-left: 4px;}
+.login .input-title{font-size: 13px;line-height: 26px;color: rgba(37,37,37,0.50);letter-spacing: 0;}
+.login .login-btn {width: 252px;border: none;font-size: 14px;color: #FFFFFF;letter-spacing: 1px;text-align: center;background: #0294FF;border-radius: 4px; line-height: 26px;  height: 32px;  }
+.login .forget-password{font-size: 13px;color: #525A65;letter-spacing: 0px;line-height: 16px;}
+.login .reset{font-size: 13px;color: #0294FF;letter-spacing: 0;}
+.login .footer{position: absolute;width: calc(100% - 390px);right: 16px;bottom: 0;font-size: 11px;color: #354052;opacity: 0.5;border-top: 1px solid #fff;line-height: 24px;}
+
+
+ /*#myBootstrapModalAlert{left: 50%;
+    z-index: 1050;
+    width: 560px;
+    margin-left: -280px;}
+    
+#myBootstrapModalAlert .modal-content{border: none;}
+
+#myBootstrapModalAlert .modal-dialog{margin: 0 auto;}*/

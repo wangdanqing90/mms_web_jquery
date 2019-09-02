@@ -1,0 +1,179 @@
+<!--角色维护-->
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<!--#include file = "/view/layout/head-script.html" -->		
+		<link rel="stylesheet" href="/css/view/order/orderList.css" />
+	</head>
+
+	<body class='contrast-red ' id="main">
+	<!--#include file = "/view/layout/head.html" -->
+	<!--#include file = "/view/layout/left-nav.html" -->
+		<section id='content'>
+			<!--#include file = "/view/layout/header.html" -->
+			<div class='container-fluid'>
+				<div class='row-fluid' id='content-wrapper'>
+					<div class='span12'>
+						<div class='row-fluid'>
+							<div class='span12'>
+								<div class='header'>									
+									<div class='pull-left'>
+										<ul class='breadcrumb '>
+											<li class='active'>销售订单管理管理</li>
+											<li class='active'>></li>
+											<li class='active'>理财订单列表</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+		
+							<div class="row-fluid oderSearch searchBox" style="white-space: nowrap;" >
+								<div class="table-title">查找条件<span class="spanStyle" id="hideOrShow" onclick="hideOrShow()">收起  <i class='icon-angle-down'></i></span> </div>
+								<div id="searchBoxCointer" class="clearfix">
+
+								<div class="searchItem ">
+										<div >订单时间 :</div>
+										<input type="text" name="orderDate" onfocus="this.blur()" class="span12" placeholder="开始时间-结束时间">
+								</div>
+								<div class="searchItem ">
+										<div >起息日: </div>
+										<input type="text" name="valueDate" onfocus="this.blur()" class="s-name  span12" placeholder="开始时间-结束时间" autocomplete="off">
+								</div>
+								<div class="searchItem margin-top-10">
+										<div >产品名称: </div>
+										<input type="text" class="s-phone span12 proName" placeholder="请输入产品名称" autocomplete="off">
+								</div>	
+								<div class="searchItem  margin-top-10">
+										<div >兑付日:</div>
+										<input type="text" name="repayDate" onfocus="this.blur()" class="s-phone span12" placeholder="开始时间-结束时间" autocomplete="off">
+								</div>	
+								<div class="searchItem margin-top-10 ">									
+										<div >来源 :</div>
+										<select class="s-sales span12 " id="select-isManual">
+											<!--<option value='' class="hide" /></option>-->
+											<option value='' selected>全部</option>
+											<option value='true'>补录</option>
+											<option value='false'>非补录</option>
+										</select>										
+								</div>	
+								<div class="searchItem margin-top-10 ">
+										<div>销售渠道:</div>
+										<select class="s-sales span12"  id="select-outerSystem">
+											<!--<option value='' class="hide" /></option>-->
+											<option value='' selected>全部</option>											
+										</select>
+								</div>
+								<div class="searchItem  margin-top-10" >
+										<div >客户姓名：</div>
+										<input type="text" class="s-sales span12 customerName" placeholder="请输入客户姓名">
+								</div>	
+								<div class="searchItem  margin-top-10" >
+										<div >注册手机号码：</div>
+										<input type="text" class="s-sales span12 phone"  placeholder="请输入注册手机号码">
+								</div>	
+								<div class="searchItem  margin-top-10" >
+										<div >证件号码：</div>
+										<input type="text" class="s-sales span12 identityNo"  placeholder="请输入证件号码">
+								</div>	
+								<div class="searchItem  margin-top-10" >
+										<div >绑卡手机号码：</div>
+										<input type="text" class="s-sales span12 accountPhone"  placeholder="请输入绑卡手机号码">
+								</div>
+								<div class="searchItem margin-top-10" >
+										<div >客户经理姓名：</div>
+										<input type="text" class="s-sales span12 salesName"  placeholder="请输入客户经理姓名">
+								</div>	
+								
+                                <div class="searchItem  margin-top-10" >
+										<div >客户经理编号：</div>
+										<input type="text" class="s-sales span12 salesNo"  placeholder="请输入客户经理编号">
+								</div>	
+								
+								<div class="searchItem  margin-top-10">
+										<div>订单状态:</div>
+										<select class="s-sales span12"  id="select-status">
+											<!--<option value='' class="hide" /></option>-->
+											<option value='' selected>全部</option>											
+									</select>
+								</div>
+								<div class="clearfix"></div>
+								<div class='margin-top-30 margin-bottom-10 searchItem'>
+								    <button  class="button-blue" onclick="searchBtn()">搜索</button>
+							   </div>							                                   
+							</div>															
+							</div>
+							
+						<div class='row-fluid '>
+							<div class='span12 box bordered-box green-border' style='margin-bottom:0;'>
+								<div class='box-content box-no-padding'>
+									<div class='responsive-table'>
+										<div class='scrollable-area'>
+											<table class='table table-bordered table-hover table-striped text-nowrap' style='margin-bottom:0;'>
+												<thead>
+													<tr>
+														<th>订单编号</th>
+														<th>订单时间</th>
+														<th>客户姓名</th>
+														<th>手机号码</th>
+														<th>证件号码</th>
+														<th>绑卡银行</th>
+														<th>银行卡号</th>
+														<th>订单金额(元)</th>
+														<th>订单渠道</th>
+														<th>产品编号</th>
+														<th>产品名称</th>
+														<th>存续期(天)</th>
+														<th>年利率</th>
+														<th>起息日</th>
+														<th>预期收益(元)</th>
+														<th>兑付日</th>
+														<th>来源方式</th>
+														<th>客户经理</th>
+														<th>客户经理号</th>
+														<th>订单状态</th>
+													</tr>
+												</thead>
+												<tbody id="order-tbody">
+
+												</tbody>
+												
+											</table>
+											<div class="emptyTable hide">暂无数据</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row-fluid space-div" ></div>
+						<!--翻页-->
+						<div class="row-fluid  page text-center">			                  
+			                  <div class="box M-box3 m-style hidden-xs" style="height: 36px;" id="box"></div>
+		                </div>
+					</div>
+				</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+
+
+           
+			
+			
+		</section>
+		</div>
+
+		<!--#include file = "/view/layout/foot.html" -->
+		<!--#include file = "/view/layout/foot-script.html" -->
+		
+		
+	</body>
+
+</html>
+<script>
+</script>
+<script src='/js/view/order/orderList.js' type='text/babel'></script>

@@ -1,0 +1,13 @@
+.table th, .table td{
+	text-align: center;
+	white-space:nowrap ;
+}
+
+#content-wrapperlabel{display: inline-block;width:100%;}
+.space-div{height: 20px;}
+#belong-tbody button{margin: 0 5px;}
+.button-cointer {
+    text-align: center;
+    padding: 10px 0 0 0;
+    position: relative;
+}

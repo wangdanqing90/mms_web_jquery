@@ -1,0 +1,284 @@
+.table th, .table td{
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+.right{
+	float: right;
+}
+.left{
+	float: left;
+}
+.gray-background{
+	background: gainsboro;
+
+}
+.input-append, .input-prepend{
+	margin-bottom: 0px!important;
+}
+.headerTitle{
+	font-family: PingFangSC-Regular;
+	font-size: 20px;
+	color: #000000;
+	letter-spacing: 0;
+	line-height: 28px;
+	margin-bottom: 22px;
+}
+/*重写样式*/
+.row-fluid .box .box-content{
+	border-radius: 0;
+}
+.box .box-content{
+	padding: 32px 24px 36px 24px;
+}
+
+label{
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #7F8FA4;
+	margin-bottom: 7px;
+	line-height: 18px!important;
+	text-overflow: ellipsis;
+    /*white-space: nowrap;*/
+    word-break: break-all
+}
+
+input[type="text"]{
+	font-family: Helvetica;
+	font-size: 14px;
+	/*color: #9FA9BA;*/
+	color: #354052;
+	text-align: left;
+	line-height: 36px!important;
+	height: 36px;
+	border-radius: 4px!important;
+}
+#chooseProduct{
+	/*float: right;*/
+	line-height: 36px;
+}
+
+
+.hasChoosed{
+	/*max-width: 100%;*/
+	min-height: 75px;
+	height: 75px;
+	border: 1px solid #CCCCCC;
+	list-style: none;
+	margin: 0!important;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	overflow: hidden;
+	
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items:center;
+	flex: 1;
+	overflow: scroll;
+	border-radius: 4px;
+	
+}
+.hasChoosed li{
+	/*min-width: 35%;*/
+	width: 50%;
+	float: left;
+	box-sizing: border-box;
+}
+.icon-img{
+	width: 18px;
+	height: 18px;
+}
+.icon-img>img{
+	width: 18px;
+	display: inline-block;
+}
+.checkbox .label-li{
+	color:#354052;
+	font-size: 14px;
+	font-family: PingFangSC-Regular;
+}
+.rate{
+	flex: 1;
+}
+.add-on{
+	/*width: 20px;*/
+	line-height: 36px;
+}
+
+.control-group .selfstyle{
+	padding: 0px;
+}
+ textarea{
+	width:100% ;
+	box-sizing: border-box;
+	border-radius: 4px!important;
+}
+/*底部按钮*/
+.normalFooter button:nth-of-type(1){
+	width: 20%;
+}
+.normalFooter button:nth-of-type(2){
+	margin: 0 24px;
+}
+input[name="daterangeRange"]{
+	text-align: center;
+}
+
+/*产品名称*/
+
+#modal-role-tbody td button:nth-child(1){margin-right:20px ;}
+#model-change-inform span,#model-change-inform button{vertical-align: middle;}
+#model-add .form-error{    margin-left: 180px;position: absolute;bottom:-10px;left:0px;}
+.modal.fade {
+    top: -100%;
+    -webkit-transition: opacity 0.3s linear, top 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, top 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, top 0.3s ease-out;
+    transition: opacity 0.3s linear, top 0.3s ease-out;
+}
+
+#model-proName .proNameSearch, #model-orgName .proNameSearch{
+	width:100%;
+	min-height: 36px;
+	line-height: 36px;
+	font-size: 14px;
+	box-sizing: border-box;
+	text-align: left;
+	padding-left: 18px;
+	
+	
+}
+ #model-orgName .proNameSearch{
+ 	width: 72%;
+ }
+.modal-header{
+	padding:24px 32px 0px 32px;
+}
+.modal-body{
+	padding: 10px 32px;
+}
+.responsive-ul .orderBox{
+	overflow: hidden;
+	list-style: none;
+	white-space: wrap;
+	margin-left: 0px;
+	padding: 10px;
+
+}
+.responsive-ul .orderBox li{
+	margin-left: 0px;
+	float: left;
+	width: 50%;
+	box-sizing: border-box;
+	/*width: 100%;*/
+	/*background: #FAFBFC;
+	border: 1px solid #E6EAEE;
+	height: 40px;*/
+}
+
+
+
+.modal-footer{
+	text-align: center;
+}
+.modal-footer button{
+	width: 15%;
+}
+
+#search-org-li{
+	list-style: none;
+	overflow: hidden;
+	background: white;
+	border: 1px solid #CCCCCC;
+	border-top: none;
+	margin: 0px;
+}
+
+#search-org-li li{
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	padding: 5px;
+}
+.dropdown-menu{
+	z-index: 9999999;
+}
+
+
+.achievement-tab .box div{
+	/*width: calc(50% - 2px);*/
+	float: left;
+	line-height: 36px;
+	height: 36px;
+	font-size: 16px;
+	text-align: center;
+	width: 50%;
+}
+
+.achievement-tab .box .active{
+	background-color: #0294FF;
+	color: white;
+}
+
+.button-bulebg{
+	background-color: none;
+	color: #0294FF;
+	border: 1px solid #0294FF;
+}
+
+input[type='checkbox']{
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    -webkit-appearance:none;
+    background: url("../../../img/unsel.png")no-repeat center;
+    background-size:18px 18px;
+    margin-right: 5px;
+}
+input[type=checkbox]:checked{
+   	background: url("../../../img/sel.png")no-repeat center;
+    background-size:18px 18px;
+    outline: none;
+}
+
+input[name='addRadio']{
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    margin-right: 5px;
+    background-color: #fff;
+    -webkit-appearance:none;
+    background: url("../../../img/performance/Radiobutton_No.png")no-repeat center;
+    background-size:18px 18px;
+}
+input[name='addRadio']:checked{
+	 border-radius: 9px;
+	 margin-right: 5px;
+   	background: url("../../../img/performance/Radiobutton_Yes.png")no-repeat center;
+    background-size:18px 18px;
+    outline: none;
+}
+.daterangepicker .ranges{
+	width: 180px;
+}
+.daterangepicker .ranges .range_inputs>div{
+	width: 50%;
+}
+.daterangepicker .ranges .range_inputs>div:nth-child(2){
+	padding-left: 0px!important;
+}
+.getAll{
+	width: 18px;
+	height: 18px;
+	background-color: #fff;
+    -webkit-appearance:none;
+    background: url("../../../img/unsel.png")no-repeat center;
+    background-size:18px 18px;
+    margin-right: 8px!important;
+    line-height: 18px;
+    
+}
+
+
+

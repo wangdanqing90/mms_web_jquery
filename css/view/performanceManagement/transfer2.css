@@ -1,0 +1,88 @@
+/*重置*/
+/*ul{margin: 0!importent;}*/
+.table th, .table td{
+	text-align: center;
+	white-space: nowrap;
+}
+
+.space-div{height: 20px;}
+.organizeTab{
+	/*width: 100%;*/
+	overflow: hidden;
+}
+.organizeTab > .inp{
+	float: left!important;
+	margin: 0!important;
+}
+
+.organizeTab button{
+	float: left;
+	margin: 0!important;
+	border-left: none;
+}
+
+.button-transfer{
+	/*float: right;*/
+}
+#create-organize-li{max-height:calc(100% - 25px);overflow:auto;border-radius: 5px;margin: 0px;}
+#create-organize-li li{font-size: 16px;padding: 10px 10px;}
+#create-person-li, #create-personDetail-li{max-height:calc(100% - 25px);overflow:auto;border-radius: 5px;margin: 0px;}
+#create-person-li li, #create-personDetail-li li{font-size: 16px;padding: 10px 10px;}
+
+#create-person>div:first-child,#create-person form{/*height: 100%;*/}
+.li-select{background-color: #00A0EA;}
+.showul{
+	background: white;
+	border: 1px solid #ddddddd;
+}
+
+.transfer-option{
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+.row-fluid .transfer-option span{
+	font-size: 14px;
+	font-weight: 500;
+}
+.row-fluid .chooseTime{
+	margin: 10px 0;
+}
+.row-fluid .transferTime{
+	border-radius: 5px!important;
+	outline: none;
+}
+
+.row-fluid .chooseTime span{
+	font-weight: bold;
+	font-size: 16px;
+}
+.row-fluid .transferOk, .row-fluid .transferReset{
+	border-radius: 5px!important;
+}
+.row-fluid .optionButton{
+	float: left;
+	margin-left: 0px;
+	border-left: none;
+}
+
+.addTransfer, .addSave{
+	line-height: 40px;
+	border: 1px solid #CCCCCC;
+	box-sizing: border-box;
+	width: 80%;
+}
+.row-fluid .order{
+	width: 50px;
+	display: inline-block;
+}
+
+/*重写样式*/
+.emptyTable{
+	height: 50px;
+	line-height: 50px;
+}
+
+
+
+

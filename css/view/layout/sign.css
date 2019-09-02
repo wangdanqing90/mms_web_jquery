@@ -1,0 +1,109 @@
+/* 
+ Creat by maybe;
+ 
+ * */	
+/*登录*/
+.asterisk{position: absolute;left: -4px;top: 8px; font-size: 20px;color: #f34541;} 
+
+
+
+.w-m-300{max-width: 300px;}
+.cursor-default{cursor: default!important;}
+.cursor{cursor: pointer!important;}
+.sign-in .controls .row-fluid input{height: 40px!important;font-size: 16px;}
+body.sign-in #wrapper .controls .form-wrapper .icon-over-input [class^="icon-"]{top: 14px;font-size: 16px;}
+.sign-in .controls .row-fluid>.span12 a{display: inline-block;vertical-align: middle;width: 120px;height: 38px;border: 1px solid #ccc;overflow: hidden;}
+.sign-in .controls .row-fluid>.span12 .img{margin-top: -6px;}
+
+/* 用户信息修改*/
+.user-info .form-horizontal{margin: 0 auto;/*max-width: 1200px;*/}
+.user-info	.row-fluid:before, .row-fluid:after{display: inline-block;margin-bottom: 14px;}
+.user-info	.form-horizontal .control-group input{padding-left: 10px;border-radius: 4px!important;}
+.user-info	.form-horizontal .control-label{width:170;}
+ .help-block{border:1px solid red!important;}
+.user-info	.submit{width: 100px;}
+.user-info .span6 label{position: relative; width: auto;padding: 4px 6px;}
+.user-info .span6 .controls{margin-left: 80px;text-align: left;}
+.user-info .span12 label{width: 30%;}
+.user-info .span12 .controls{margin-left: 32%;text-align: left;}
+.user-info  input{height: 36px;line-height: 36px;}
+.user-info  select{height: 36px;line-height: 36px;}
+.user-info input[type="button"]{cursor: pointer;}
+/* 人员管理*/
+/*.management input,.management select{height:36px;line-height:34px;box-sizing: border-box; border-radius: 4px!important;}*/
+.management .form-horizontal,.management  .manage-table{margin: 0 auto;/*max-width: 1200px;*/}
+.management  .index .form-horizontal .control-label{width: auto;padding-left: 4px;padding-right: 6px;}
+/*.management .index .searchItem {width:calc(33% - 20px);float: left;padding: 0;border-radius: 4px}*/
+/*人员管理--编码管理  */
+.management .manage input{text-indent: 8px;}
+.management .manage .span12 .controls{text-align: left;}
+.management .manage .span12 .controls input{width: 80%;}
+.management .manage .manage-numbers-delete{margin: 0px auto;}
+.management .manage .manage-numbers-delete .line{width: 80%;border-top: 1px dashed;margin: 0 auto;padding-top:20px; }
+.management .manage .manage-numbers-delete input{background-color: #cccccc;}
+
+/* 人员管理-- 详情*/
+.management .detail .span6 label{width: auto;padding: 4px 6px;}
+.management  .detail .span6 .controls{margin-left: 80px;text-align: left;}
+
+.row-fluid label{
+	font-size: 12px;
+    color: #7F8FA4;
+    height: 12px;
+    line-height: 12px;
+    padding: 0 0 8px 0;
+}
+.searchBox {
+    padding: 30px 0px;
+}
+
+
+/*修改登录密码*/
+.change-password .searchItem{width: 60%;padding: 0 20%;}
+.change-password .table-title{margin-top: 20px;}
+
+.m-style input {
+    float: left;
+    margin: 0 5px;
+    padding: 0;
+    width: 40px!important;
+    height: 40px!important;
+    line-height: 38px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    outline: none;
+    color: #bdbdbd;
+    font-size: 12px;
+    box-sizing: border-box;
+    border-radius: 0px!important;
+}
+
+/*上传excell*/
+.file {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+.file input {
+    position: absolute;font-size: 100px;right: 0;top: 0;opacity: 0;
+}
+
+.file-input-wrapper{display: none;}
+.file-input-wrapper+span{position: absolute;top: 4px;left:105px;} 
+
+

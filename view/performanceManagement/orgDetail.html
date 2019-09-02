@@ -1,0 +1,115 @@
+<!--组织渠道提成管理-->
+
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<!--#include file = "/view/layout/head-script.html" -->
+		<link rel="stylesheet" href="../../css/view/performanceManagement/orgRoyalty.css" />
+		<link rel="stylesheet" href="../../plugins/jquery/tree/tree.css" />
+	</head>
+
+	<body class='contrast-red '>
+		<!--#include file = "/view/layout/head.html" -->
+		<!--#include file = "/view/layout/left-nav.html" -->
+		<section id='content'>
+			<div class='container-fluid'>
+				<div class='row-fluid' id='content-wrapper'>
+					<div class='span12'>
+						<div class='row-fluid'>
+							<div class='span12'>
+								<div class='page-header'>
+									<h1 class='pull-left'><i class='icon-table'></i><span>组织提成</span></h1>
+									<div class='pull-right'>
+										<ul class='breadcrumb'>
+											<li>
+												<a href="/index.html"><i class='icon-bar-chart'></i>
+												</a>
+											</li>
+											<li class='separator'>
+												<i class='icon-angle-right'></i>
+											</li>
+											<li class='active'>组织提成</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--信息-->
+						<div class="row-fluid  outerCointer" id="add-org">
+							<div class='row-fluid '>								
+								<div class='form-horizontal'>
+									<div class='control-group'>
+					                    <label class='control-label' for='products-name'>组织编号：</label>
+					                    <div class='controls'>
+					                         <input id='products-id' class="products-input"  type='text'  readonly="readonly"/>
+					                    </div>
+					                </div>
+									
+									<div class='control-group'>
+					                    <label class='control-label' for='products-name'>组织名称：</label>
+					                    <div class='controls'>
+					                        <input id='products-name' class="products-input" type='text' readonly="readonly"/>
+					                    </div>
+					                </div>
+					                
+					                <div class='control-group'>
+					                    <label class='control-label' for='products-name'>通用提成：</label>
+					                    <div class='controls'>
+					                        <input id='products-per' class="products-input" type='text'> ‰ 
+					                    </div>
+					                </div>
+
+									<div class="bottom text-center">
+										<button class="btn btn-default btn-change" onclick="addBtn()">添加</button>
+										<button class="btn btn-default btn-change" onclick="cancleBtn()">返回</button>
+									</div>
+								</div>								
+							</div>
+						</div>
+						
+
+						
+						<!--导入文件-->
+						<div id="model-upload" class="modal fade" tabindex="-1" role="dialog">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										<h4 class="modal-title">选择文件</h4>
+									</div>
+									<div class="modal-body">
+										<div class='row-fluid'>
+											<a href="javascript:;" class="file" onclick="upload()">选择文件
+											</a>											
+											<input type="file" name="file" id="fileId" onchange="filechange()">
+										</div>
+					
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+										<button type="button" class="btn btn-primary" onclick="check()">导入</button>
+									</div>
+								</div>
+							</div>
+						</div>		    
+			    </div>
+					</div>
+				</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+		</div>
+		</section>
+		</div>
+
+		<!--#include file = "/view/layout/foot.html" -->
+		<!--#include file = "/view/layout/foot-script.html" -->
+		<script type="text/javascript" src="../../plugins/jquery/tree/treescroll.min.js"></script>
+		<script src='../../js/view/performanceManagement/orgRoyalty.js' type='text/babel'></script>
+	</body>
+
+</html>
+<script>
+</script>

@@ -1,0 +1,82 @@
+
+.table th, .table td{
+	text-align: center;
+}
+.space-div{height: 20px;}
+#wrapper{min-height: auto;}
+#wrapper{height:100%;}
+#content{height:100%;}
+.container-fluid{height: calc(100% - 75px) ;}
+#searchBoxCointer{box-sizing: border-box;padding: 50px 0;margin: 0;}
+#content-wrapper,#content-wrapper>div:first-child{height:100% ;}
+#content{overflow-y: auto;}
+input,textarea{width: 80%;}
+
+
+
+/*详情*/
+#add-org .button-green:nth-child(2){margin-left:20px;}
+#add-org .bottom button:nth-of-type(1){font-size: 16px;height: 40px;line-height: 40px;padding: 0 16px;letter-spacing:1.5px;width: 100px;background-color: #00A0EA;color:white;margin-right:50px ;}
+#add-org .bottom button:nth-of-type(2){font-size: 16px;height: 40px;line-height: 40px;padding: 0 16px;letter-spacing:1.5px;width: 100px;}
+#add-org .bottom{margin: 40px 0 0 0;}
+
+
+
+ 
+/*上传excell*/
+.file {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+.file input {
+    position: absolute;font-size: 100px;right: 0;top: 0;opacity: 0;
+}
+
+.file-input-wrapper{display: none;}
+.file-input-wrapper+span{position: absolute;top: 20px;left:105px;} 
+
+
+#add-org{height: calc(100% - 100px);padding-bottom: 100px;}
+#add-org .row-fluid{height: calc(100% - 75px) ;background-color: white;}
+.row-fluid {width:auto;}
+.form-horizontal{width: 100%;}
+.form-horizontal .control-label {
+    width: 84px;
+    text-align: left;
+}
+.form-horizontal .controls {
+    margin-left: 100px;
+    padding-left: 0px;
+}
+.controls .products-input {
+    height: 30px !important;
+    box-sizing: border-box;
+    line-height: 30px;
+}
+#products-name,#products-id {
+    color: #d0d0d0;
+}
+
+.searchItem{
+	width: 96%;
+	
+	
+}
+.modal.fade{
+	top: -100%!important;
+}

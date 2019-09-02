@@ -1,0 +1,154 @@
+
+.space-div{height: 20px;}
+#model-change-inform span,#model-change-inform button{vertical-align: middle;}
+#model-add .form-error{margin-left: 180px;position: absolute;bottom:-10px;left:0px;}
+#wrapper{min-height: auto;}
+#wrapper{height:100%;}
+#content{height:100%;}
+.container-fluid{height: calc(100% - 75px) ;}
+#content-wrapper,#content-wrapper>div:first-child{height:100% ;}
+#content{overflow-y: auto;}
+input,textarea{width: 80%;}
+#create-person-li  .li-select, #transfer-li  .li-select{background-color:#0294FF;}
+
+/*详情*/
+#create-inform .btn-change{float:left;width:25%;font-size: 16px;height: 40px;line-height: 40px;padding: 0 16px;letter-spacing:1.5px;}
+#create-inform .btn-change:nth-of-type(1){background-color: lightgreen;color:white}
+#create-inform .btn-change:nth-of-type(2){background-color: #ffcc99;color:white}
+#create-inform .btn-change:nth-of-type(3){background-color: #00A0EA;color:white}
+#create-inform .button-blue-small{width:60px;text-align: left;}
+#create-inform .title{font-size: 20px;padding: 0 0 20px 0;}
+#create-inform .title button{margin-left:20px ;}
+#create-inform-name{font-weight: bold;}
+.button-blue-small {
+    padding: 0;
+}
+
+
+
+/*创建组织*/
+#create-organize{height:  calc(100% - 40px);}
+#create-organize .form-error{margin-left: 25%; position: absolute;top: 420px;left: 0px;}
+#create-organize form{position: relative;padding:0 0 40px 0 ;}
+#create-organize-code{color:#d0d0d0;}
+#create-organize .searchItem{
+	width: 96%;
+	padding: 0 2%;
+}
+#create-organize .searchBox{
+   height:  calc(100% - 54px);margin: 0;padding:20px 0;position: relative;
+}
+
+#create-organize #searchBoxCointer{width:100%;}
+
+/*创建人物*/
+#create-person .bottom button:nth-of-type(1),#transfer .bottom button:nth-of-type(1){font-size: 16px;height: 40px;line-height: 40px;padding: 0 16px;letter-spacing:1.5px;width: 100px;background-color: #00A0EA;color:white;margin-right:50px ;}
+#create-person .bottom button:nth-of-type(2),#transfer .bottom button:nth-of-type(2){font-size: 16px;height: 40px;line-height: 40px;padding: 0 16px;letter-spacing:1.5px;width: 100px;}
+#create-person input{width:60%;}
+#create-person ul{max-height:calc(100% - 25px);overflow:auto;border: 1px solid #dddddd;border-radius: 5px;}
+.li-cointer{width:48%;height: 100%;}
+
+.li-cointer:nth-child(1){float:left;}
+.li-cointer:nth-child(2){float:right;}
+#create-person li,#transfer-li li{font-size: 12px;padding: 10px 30px;color:#354052;background: #FAFBFC;border-bottom: 1px solid #dddddd;}
+#create-person>div:first-child{height: calc(100% - 60px);padding:20px 0 0 0;background: white;margin: 0;}
+#create-person form,#transfer-li form{height: 100%;}
+#create-person .controls {
+    margin:0 2%;
+}
+#create-person .searchItem input{
+    width: calc(100% - 168px);
+}
+#create-person li label {
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 28px;
+}
+
+#create-person li label input{
+	margin: 0;
+}
+
+#create-person li button{float:right}
+
+/*转移*/
+#transfer{overflow: auto;padding: 0 0 50px 0;}
+#transfer .tips{margin-left: 0;padding: 10px 0 0 0;color: #999999;}
+#transfer-li{background-color: white;max-height:200px;overflow:auto;width:406px;border: 1px solid #dddddd;}
+#transfer .bottom{margin:0;text-align: center;}
+#transfer .treeButtonCointer{padding: 10px 20px 20px 0 ;}
+#transfer .searchItem ,#create-person  .searchItem{
+	width: 96%;display: block;
+	
+}
+#transfer .searchItem input{
+	width: 370px;
+	float: left;
+}
+
+#transfer .controls{
+	margin-left: 2%;
+}
+
+
+
+.checkBox input[type='checkbox']{
+	border: 0;
+	box-shadow: none !important;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+   -webkit-appearance:none;
+   background: url("../../../img/unsel.png") no-repeat center;
+   background-size:18px 18px;
+}
+.checkBox input[type=checkbox]:checked{
+	box-shadow: none !important;
+	border: 0 ;
+	width: 18px;
+    height: 18px;
+    background-color: #fff;
+   -webkit-appearance:none;
+   background: url("../../../img/sel.png") no-repeat center;
+   background-size:18px 18px;
+}
+#transfer label{
+	display: inline-block;
+	box-shadow: none !important;
+	outline:none !important;
+	border: none !important;
+}
+
+#transfer .button-blue-small{
+	padding: 0;
+}
+
+ 
+/*上传excell*/
+.file {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+.file input {
+    position: absolute;font-size: 100px;right: 0;top: 0;opacity: 0;
+}
+
+.file-input-wrapper{display: none;}
+.file-input-wrapper+span{position: absolute;top: 20px;left:105px;} 
+
+.searchItem input{border-radius: 4px !important;}

@@ -1,0 +1,16 @@
+.table th, .table td{
+	text-align: center;
+	white-space: nowrap;
+}
+
+.space-div{height: 20px;}
+#modal-role-tbody td button:nth-child(1){margin-right:20px ;}
+#model-change-inform span,#model-change-inform button{vertical-align: middle;}
+#model-add .form-error{    margin-left: 180px;position: absolute;bottom:-10px;left:0px;}
+.modal.fade {
+    top: -100%;
+    -webkit-transition: opacity 0.3s linear, top 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, top 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, top 0.3s ease-out;
+    transition: opacity 0.3s linear, top 0.3s ease-out;
+}

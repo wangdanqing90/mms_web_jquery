@@ -1,0 +1,157 @@
+<!--角色维护-->
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<!--#include file = "/view/layout/head-script.html" -->		
+		<link rel="stylesheet" type="text/css" href="/plugins/jquery/jedate/jedate.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/view/product/productList.css"></script>
+	</head>
+
+	<body class='contrast-red ' id="main">
+	<!--#include file = "/view/layout/head.html" -->
+	<!--#include file = "/view/layout/left-nav.html" -->
+		<section id='content'>
+			<!--#include file = "/view/layout/header.html" -->
+			<div class='container-fluid'>
+				<div class='row-fluid' id='content-wrapper'>
+					<div class='span12'>
+						<div class='row-fluid'>
+							<div class='span12'>
+								<div class='header'>									
+									<div class='pull-left'>
+										<ul class='breadcrumb '>
+											<li class='active'>产品管理</li>
+											<li class='active'>></li>
+											<li class='active'>产品列表</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					<div class="row-fluid oderSearch searchBox" style="white-space: nowrap;" >
+						        <div class="table-title">查找条件<span  class="spanStyle" id="hideOrShow" onclick="hideOrShow()">收起  <i class='icon-angle-down'></i></span> </div>
+						        <div id="searchBoxCointer" class="clearfix">
+								<div class=" searchItem">
+									<div>起息范围</div>
+									<input type="text" name="valueDate" onfocus="this.blur()" class=" span12" placeholder="开始时间-结束时间" autocomplete="off">
+								</div>
+								<div class="searchItem">
+									<div>创建日期</div>
+									<input type="text" onfocus="this.blur()" name="createDate" class=" span12" placeholder="开始时间-结束时间" autocomplete="off">
+								</div>
+								<div class=" margin-top-10 searchItem">
+										<div >产品名称</div>
+										<input type="text" class="span12  proName" placeholder="请输入产品名称" autocomplete="off">
+								</div>	
+								<div class="margin-top-10 searchItem">
+										<div >利率:</div>
+										<input type="text" class="span12  interestRate" placeholder="请输入利率" onkeyup="value=value.match(/\d+\.?\d{0,2}/,'')">
+								</div>	
+								<div class="margin-top-10 searchItem">
+										<div >起投金额 </div>
+										<input type="text" class="minMonely" style="float: left;width:45%;" placeholder="" oninput = "value=value.replace(/[^\d]/g,'')">
+										<label class="line">-</label>
+										<input type="text" class="maxMonely" style="float: right;width:45%;" placeholder="" oninput = "value=value.replace(/[^\d]/g,'')">
+										
+								</div>
+								<div class="margin-top-10 searchItem" >
+										<div>销售渠道</div>
+										<select class="s-sales span12 "  id="select-outerSystem">
+											<!--<option value='' class="hide" /></option>-->
+											<option value='' selected>全部</option>											
+										</select>
+								</div>	
+								<div class="margin-top-10 searchItem" >
+										<div >来源方式</div>									
+											<select class="s-sales span12" id="select-isManual">
+											<!--<option value='' class="hide" /></option>-->
+											<option value='' selected>全部</option>
+											<option value='true'>补录</option>
+											<option value='false'>非补录</option>
+										</select>		
+										
+										
+								</div>	
+								<div class="margin-top-10 searchItem" >
+									<div >产品状态</div>	
+										<select class="s-sales span12" id="select-status">
+											<option value='' selected>全部</option>
+											</select>		
+								</div>
+								
+								<div class='margin-top-30 margin-bottom-10 searchItem'>
+								    <button  class="button-blue" onclick="searchBtn()">搜索</button>
+							    </div>
+							    </div>
+							</div>	
+							
+
+						<div class='row-fluid '>
+							<div class='span12 box bordered-box' style='margin-bottom:0;'>
+								
+								<div class='box-content box-no-padding'>
+									<div class="table-title">产品列表</div>
+									<div class='responsive-table'>
+										<div class='scrollable-area'>
+											<table class='table table-bordered table-hover table-striped ' style='margin-bottom:0;'>
+												<thead>
+													<tr>
+														<th>创建日期</th>
+														<th>产品编号</th>
+														<th>产品名称</th>
+														<th>利率</th>
+														<th>发行规模(元)</th>
+														<th>募集开始日</th>
+														<th>募集结束日</th>
+														<th>存续期(天)</th>
+														<th>起息日</th>
+														<th>兑付日</th>
+														<th>起投金额（元）</th>
+														<th>投资最高份额（元）</th>
+														<th>还款方式</th>
+														<th>风险类型</th>
+														<th>销售渠道</th>
+														<th>来源方式</th>
+														<th>产品状态</th>
+														
+													</tr>
+												</thead>
+												<tbody id="products-tbody">
+	
+												</tbody>
+												
+											</table>
+											<div class="emptyTable hide">暂无数据</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						
+						<div class="row-fluid space-div" ></div>
+						<!--翻页-->
+						<div class="row-fluid  page text-center">			                  
+			                  <div class="box M-box3 m-style hidden-xs" style="height: 36px;" id="box"></div>
+		                </div>
+					</div>
+				</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+		</section>
+		</div>
+		<!--#include file = "/view/layout/foot.html" -->
+		<!--#include file = "/view/layout/foot-script.html" -->
+	</body>
+
+</html>
+<script>
+</script>
+
+<script src="/plugins/jquery/jedate/jquery.jedate.min.js"></script>
+<script src='../../js/view/product/productList.js' type='text/babel'></script>

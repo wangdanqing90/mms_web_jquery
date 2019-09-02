@@ -1,0 +1,300 @@
+<!--组织结构管理-->
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<!--#include file = "/view/layout/head-script.html" -->
+
+		<link rel="stylesheet" href="../../css/view/organizationPerson/structure.css" />
+		<link rel="stylesheet" href="../../plugins/jquery/tree/tree.css" />
+	</head>
+
+	<body class='contrast-red '>
+		<!--#include file = "/view/layout/head.html" -->
+		<!--#include file = "/view/layout/left-nav.html" -->
+		<section id='content'>
+			<!--#include file = "/view/layout/header.html" -->
+			<div class='container-fluid'>
+				<div class='row-fluid' id='content-wrapper'>
+					<div class='span12'>
+						<div class='row-fluid'>
+							<div class='span12'>
+								<div class='header'>
+									<div class='pull-left'>
+										<ul class='breadcrumb '>
+											<li class='active'>组织与人员管理</li>
+											<li class='active'>></li>
+											<li class='active'>组织结构</li>
+										</ul>
+										<!--<a href="/api/mms-api/salesOrg/export" class="download" style="display: inline;width:200px;height: 100px;">11111</a>-->
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--文件树-->
+						<div class="row-fluid treebox-cointer  outerCointer" id="treebox">
+							<div class="centent">
+								<div class="treebox scrollXY">
+									<div class="tree">
+										<ul id="tree_ul">
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="treeButtonCointer clearfix">
+								<button type="button" class="button-blue margin-left-24" onclick="perImportBtn()">人员归属批量导入</button>
+								<button type="button" class="button-blue margin-left-24" onclick="perDownloadBtn()">人员归属模板下载</button>
+								<button type="button" class="button-white margin-left-24" onclick="orgImportBtn()">组织结构批量导入</button>
+								<button type="button" class="button-white margin-left-24" onclick="orgDownloadBtn()">组织结构模板下载</button>
+
+							</div>
+						</div>
+
+						<!--信息-->
+						<div class="row-fluid  hide outerCointer" id="create-inform">
+							<div class='row-fluid' style="height: 100%;">
+
+								<div class='span12 box bordered-box ' style='margin-bottom:0;margin-left:0;height:calc(100% - 60px);'>
+									<div class='box-content box-no-padding' style="height: 100%;">
+										<div class="table-title"><span id="create-inform-name"></span><button type="button" class="button-blue-small margin-left-10" onclick="orgainizeBtn(true)">修改组织</button></div>
+										<div class='responsive-table' style="height:calc(100% - 80px);overflow: scroll;">
+											<div class='scrollable-area'>
+												<table class='table table-bordered table-hover table-striped ' style='margin-bottom:0;'>
+													<thead>
+														<tr>
+															<th>组织/人员</th>
+															<th>操作</th>
+														</tr>
+													</thead>
+													<tbody id='modal-role-tbody'>
+
+													</tbody>
+												</table>
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="treeButtonCointer clearfix">
+									
+									<button type="button" class="button-blue margin-left-24" onclick="cancleHomeBtn()">返回</button>
+									<button type="button" class="button-blue margin-left-24" onclick="orgainizeBtn(false)">新建组织</button>
+									<button type="button" class="button-white margin-left-24" onclick="personBtn()">加入人员</button>
+									<button type="button" class="button-white margin-left-24" onclick="transferBtn()">人员转移</button>
+								</div>
+
+							</div>
+						</div>
+
+						<!--新建组织-->
+						<div class="row-fluid oderSearch  hide outerCointer" id="create-organize">
+							<div class="clearfix searchBox">
+
+								<div class=" margin-top-10 searchItem">
+									<div> * 组织名称</div>
+									<input type='text' id="create-organize-name" placeholder="例子：上海分公司 或 第六团队" maxlength="100" onchange="checkAddInform()" onkeyup="value=value.replace(/[^\w\u4E00-\u9FA5]/g, '')" />
+								</div>
+								<div class=" margin-top-10 searchItem">
+									<div>* 组织编码</div>
+									<input type='text' id="create-organize-code" value="系统自动分配" readonly="readonly" />
+								</div>
+								<div class=" margin-top-10 searchItem">
+									<div>组织描述</div>
+									<textarea type='text' rows="3" id="create-organize-describe" maxlength="1000" /></textarea>
+								</div>
+								<div class=" margin-top-10 searchItem">
+									<div>组织地址</div>
+									<input type='text' id="create-organize-area" maxlength="500" />
+								</div>
+								<div class=" margin-top-10 searchItem">
+									<div>联系方式</div>
+									<input type='text' id="create-organize-contact" maxlength="50" />
+								</div>
+
+								<div class='form-error hide'></div>
+							</div>
+
+							<div class="treeButtonCointer clearfix">
+								<button type="button" class="button-white margin-left-24" onclick="cancleBtn()">返回</button>
+								<button type="button" class="button-blue margin-left-24" id="addBtn" onclick="createOKBtn()">添加</button>
+							</div>
+						</div>
+
+						<!--加入人员-->
+						
+						<div class="row-fluid hide outerCointer" id="create-person">
+							<div class='span12 box'>
+								<form class='form form-horizontal validate-form' id="create-organize-form" style='margin-bottom: 0;' />
+								
+								<div class=" margin-top-10 searchItem control-group">
+										<div> 人员</div>							
+										<input type='text' id="create-person-name" placeholder="支持：人员姓名和手机号" />
+										<button type='button' class="button-blue margin-left-16" onclick="searchBtn()">搜索</button>
+								        <div class="clearfix"></div>
+								</div>
+
+								<div class='control-group' style=" height: calc(100% - 70px);">
+									<div class='controls' style="height: 100%;">
+										<div class="li-cointer">
+										<ul id="create-person-li">
+
+										</ul>
+										</div>
+										<div class="li-cointer">
+										<ul id="create-person-li-2">
+
+										</ul>
+										</div>
+									</div>
+								</div>								
+							</form>
+							</div>
+							
+							<div class="treeButtonCointer clearfix">
+								<button type='button' class="button-blue margin-left-24" onclick="cancleBtn()">取消</button>
+							    <button type='button' class="button-white " onclick="personOKBtn()">加入</button>
+							</div>
+						</div>
+
+						
+
+						<!--转移-->
+						<div class="row-fluid  hide outerCointer" id="transfer">
+							<div class='row-fluid'>
+								<div class='span12 box bordered-box ' style='margin-bottom:0;margin-left:0'>
+									<div class='box-content box-no-padding'>
+										<div class='responsive-table'>
+											<div class='scrollable-area'>
+												<table class='table table-bordered table-hover table-striped ' style='margin-bottom:0;'>
+													<thead>
+														<tr>
+															<th onclick="allSelect()">全选</th>
+															<th>人员</th>
+															<th>销售订单</th>
+															<th>操作</th>
+														</tr>
+													</thead>
+													<tbody id='transfer-tbody'>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class='span12 box' style="margin: 20px 0 0 0;padding:20px 0 0 0;background: white;">
+									<form class='form form-horizontal validate-form clearfix' id="transfer-form" style='margin-bottom: 0;' />
+									<div class=" margin-top-10 searchItem clearfix">
+										<div> 组织选择</div>
+										<input type='text' id="transfer-search" placeholder="支持：组织编码，组织名称" />
+										<button type='button' class="button-blue margin-left-16" onclick="transferSearchBtn()">搜索</button>
+										
+									</div>
+
+									<div class='control-group'>
+										<div class='controls'>
+											<ul id="transfer-li">
+
+											</ul>
+										</div>
+									</div>
+									</form>
+
+									<div class="treeButtonCointer clearfix">
+										<button type='button' class="button-white margin-left-24" onclick="cancleBtn()">返回</button>
+										<button type='button' class="button-blue" onclick="transferNextBtn()">转移</button>
+
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+
+						<!--修改按钮弹框-->
+						<div id="model-transfer" class="modal fade" tabindex="-1" role="dialog">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										<h4 class="modal-title">转移组织人员名单 确认信息</h4>
+									</div>
+									<div class="modal-body">
+										<div class='span12 box bordered-box' style='margin-bottom:0;margin-left:0'>
+											<div class='box-content box-no-padding'>
+												<div class='responsive-table'>
+													<div class='scrollable-area'>
+														<table class='table table-bordered table-hover table-striped ' style='margin-bottom:0;'>
+															<thead>
+																<tr>
+																	<th>序号</th>
+																	<th>转移人员</th>
+																	<th>原组织</th>
+																	<th>新组织</th>
+																</tr>
+															</thead>
+															<tbody id='modal-transfer-tbody'>
+
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									
+									<button type="button" class="button-blue" onclick="transferOKBtn()">确认转移</button>
+									<button type="button" class="button-white margin-left-24" data-dismiss="modal">撤销</button>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+
+				</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			<!--导入文件-->
+			<div id="model-upload" class="modal fade" tabindex="-1" role="dialog">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title">选择文件</h4>
+						</div>
+						<div class="modal-body">
+							<div class='row-fluid'>
+								<a href="javascript:;" class="file" onclick="upload()">选择文件
+								</a>
+								<input type="file" name="file" id="fileId" onchange="filechange(this) " accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="button-white" data-dismiss="modal">返回</button>
+							<button type="button" class="button-blue margin-left-24" onclick="check()">导入</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		</div>
+
+		<!--#include file = "/view/layout/foot.html" -->
+		<!--#include file = "/view/layout/foot-script.html" -->
+		<script type="text/javascript" src="../../plugins/jquery/tree/treescroll.min.js"></script>
+		<script src='../../js/view/organizationPerson/structure.js' type='text/babel'></script>
+	</body>
+
+</html>
+<script>
+</script>

@@ -1,0 +1,7 @@
+.table th, .table td{
+	text-align: center;
+	white-space: nowrap;
+}
+
+#modal-role-tbody td button:nth-child(1){margin-right:20px ;}
+#model-change-inform span,#model-change-inform button{vertical-align: middle;}

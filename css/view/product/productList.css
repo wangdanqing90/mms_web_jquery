@@ -1,0 +1,21 @@
+.table th,
+.table td {
+	text-align: center;
+	white-space: nowrap;
+}
+
+.text-left {
+	text-align: left!important;
+}
+
+
+.oderSearch span {
+	width: 80px;
+	text-align: right;
+	display: inline-block;
+	min-width: 80px;
+}
+
+.space-div {
+	height: 20px;
+}

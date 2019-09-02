@@ -1,0 +1,232 @@
+<div id='wrapper'>
+<div id='main-nav-bg'></div>
+<nav class='left-nav' id='main-nav'>
+<div class='navigation'>
+<div class='search'>
+   
+</div>
+<ul class='nav nav-stacked'>
+<!--<li class='active'>
+    <a href='index.html'>
+        <i class='icon-dashboard'></i>
+        <span>Dashboard</span>
+    </a>
+</li>-->
+
+
+<div class="padding-left-10 padding-top-15 margin-bottom-10" onclick="(function(){location.href='/index.html'})() ">
+   	<img src="/img/logo2.png"/ width="30">
+    <span  class="head-title" style=" font-size: 18px;color: #FFFFFF;letter-spacing: 0;line-height: 18px;vertical-align: -5px;">营销管理平台</span>
+</div>
+<li class="nav-two hide  " >
+    <a class='dropdown-collapse ' href='javaScript:void(0);'>
+        <i class='icon-cogs'></i>
+        <span>权限管理</span>
+        <i class='icon-caret-down caret-down icon-caret-down-right'></i>
+    </a>
+    <ul class='nav nav-stacked ' id="PrivilegeManagement">       
+        <li class='roleMaintenance hide'>
+            <a href='/view/PrivilegeManagement/RoleMaintenance.html'>
+                <!--<i class='icon-file-alt'></i>-->
+                <span>角色维护</span>
+            </a>
+        </li>
+        <li class='userMaintenance hide'>
+            <a href='/view/PrivilegeManagement/UserMaintenance.html'>
+               <!-- <i class='icon-file-alt'></i>-->
+                <span>用户维护</span>
+            </a>
+        </li>     
+    </ul>
+</li>
+
+<li class='nav-one hide'>
+    <a class='dropdown-collapse' href='#' >
+        <i class='icon-group'></i>
+        <span>组织与人员管理</span>
+        <i class='icon-caret-down caret-down icon-caret-down-right'></i>
+    </a>
+    <ul class='nav nav-stacked' id="organizationPerson">
+		
+		        <li class='structure hide'>
+		            <a href='/view/organizationPerson/structure.html'>
+		              <!--  <i class='icon-file-alt'></i>-->
+		                <span>组织结构</span>
+		            </a>
+		        </li>
+		        
+		        <li class='manageIndex hide'>
+		            <a href='/view/organizationPerson/management.html'>
+		              <!--  <i class='icon-file-alt'></i>-->
+		                <span >人员列表</span>
+		            </a>
+		        </li>
+		        
+		       	<li class='number hide'>
+		            <a href='/view/organizationPerson/number.html'>
+		                <!--<i class='icon-file-alt'></i>-->
+		                <span>编号关系管理</span>
+		            </a>
+		        </li>
+		        <li class='wizard hide'>
+		            <a href='/view/organizationPerson/wizard.html'>
+		                <!--<i class='icon-caret-right'></i>-->
+		                <span>变更记录</span>
+		            </a>
+		        </li>	                      
+    </ul>
+</li>
+
+
+<li class='perfManage hide'>
+    <a class='dropdown-collapse' href='#' >
+        <i class='icon-tasks'></i>
+        <span>业绩管理</span>
+        <i class='icon-caret-down caret-down icon-caret-down-right' ></i>
+    </a>
+    <ul class='nav nav-stacked ' id="performanceManagement">
+        <li class='perTransfer hide'>
+            <a href='/view/performanceManagement/transfer.html'>
+               <!-- <i class='icon-file-alt'></i>-->
+                <span>业绩转移</span>
+            </a>
+        </li>
+        <li class='actCommission hide'>
+            <a href='/view/performanceManagement/addActCommission.html'>
+                <!--<i class='icon-file-alt'></i>-->
+                <span>活动提成</span>
+            </a>
+		</li>
+        <li class='orgRoyalty hide'>
+            <a href='/view/performanceManagement/orgRoyalty.html'>
+               <!-- <i class='icon-file-alt'></i>-->
+                <span>组织提成</span>
+            </a>
+		</li> 
+           
+           
+        <li class='achievement hide'>
+            <a href='/view/performanceManagement/achievement.html'>
+               <!-- <i class='icon-file-alt'></i>-->
+                <span>员工业绩统计</span>
+            </a>
+        </li>                                                             
+    </ul>
+</li>
+
+<li class='order hide'>
+    <a class='dropdown-collapse' href='#' >
+        <i class='icon-signal'></i>
+        <span>销售订单管理</span>
+        <i class='icon-caret-down caret-down icon-caret-down-right'></i>
+    </a>
+    <ul class='nav nav-stacked' id="order">
+        <li class='orderPatch hide'>
+        	<a href='/view/order/orderPatch.html'>
+               <!-- <i class='icon-file-alt'></i>-->
+                <span>订单补录</span>
+            </a>
+            
+		</li> 
+		<li class='orderList hide'>
+        	<a href='/view/order/orderList.html'>
+                <!--<i class='icon-file-alt'></i>-->
+                <span>理财订单列表</span>
+           </a>            
+		</li>						
+    </ul>
+</li>
+<li class='product  hide'>
+    <a class='dropdown-collapse' href='#' >
+        <i class='icon-inbox'></i>
+        <span>产品管理</span>
+        <i class='icon-caret-down caret-down icon-caret-down-right' ></i>
+    </a>
+    <ul class='nav nav-stacked' id="product">
+    	<li class='productPatch hide'>
+            <a href='/view/product/productPatch.html'>
+               <!-- <i class='icon-file-alt'></i>-->
+                <span>产品补录</span>
+            </a>
+		</li> 
+        <li class='productList hide'>
+            <a href='/view/product/productList.html'>
+               <!-- <i class='icon-file-alt'></i>-->
+                <span>产品列表</span>
+            </a>
+		</li>                   
+    </ul>
+</li>
+
+<li class='orderCheck hide'>
+    <a class='dropdown-collapse' href='#'>
+        <i class='icon-list'></i>
+        <span>审核管理</span>
+        <i class='icon-caret-down caret-down icon-caret-down-right'></i>
+    </a>
+    <ul class='nav nav-stacked'  id="check">
+        <li class='organizaCheck hide'>
+            <a href='/view/organizationPerson/organizCheck.html'>
+              <!--  <i class='icon-file-alt'></i>-->
+                <span>组织审核</span>
+            </a>
+		 </li>
+		 <li class='orgCheck hide'>
+            <a href='/view/performanceManagement/orgCheck.html'>
+                <!--<i class='icon-file-alt'></i>-->
+                <span>组织提成审核</span>
+            </a>
+		 </li>        
+		 <li class='manCheck hide'>
+            <a href='/view/organizationPerson/manCheck.html'>
+                <!--<i class='icon-file-alt'></i>-->
+                <span >人员组织调整审核</span>
+            </a>
+		</li>
+		<li class='royalty hide'>
+            <a href='/view/performanceManagement/royalty.html'>
+                <!--<i class='icon-file-alt'></i>-->
+                <span>活动提成审核</span>
+            </a>
+		</li>
+		<li class='perfCheck hide'>
+	            <a href='/view/performanceManagement/perfCheck.html'>
+	               <!-- <i class='icon-file-alt'></i>-->
+	                <span>业绩转移审核</span>
+	            </a>
+		</li> 
+		 		 
+    </ul>
+</li>
+
+
+<li class="actionRecord hide">
+
+	
+   <a class='dropdown-collapse' href='#'>
+        <i class='icon-paste'></i>
+        <span>操作记录</span>
+       <i class='icon-caret-down caret-down icon-caret-down-right'></i>
+    </a>
+    <ul class='nav nav-stacked' id="actionRecord">
+    	<li class='perfRecord hide'>
+	            <a href='/view/performanceManagement/transferRecord.html'>
+	               <!-- <i class='icon-file-alt'></i>-->
+	                <span>业绩变更记录</span>
+	            </a>
+		</li>  
+		        
+        <li class='systemRecord hide'>
+            <a href='/view/system/systemRecord.html'>
+               <!-- <i class='icon-file-alt'></i>-->
+                <span>系统操作记录</span>
+            </a>
+		</li>                   
+    </ul>
+</li>
+
+</ul>
+</div>
+</nav>
+
+<script src="/js/view/layout/left-nav.js" type="text/javascript"></script>

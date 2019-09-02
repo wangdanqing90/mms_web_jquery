@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<!--#include file = "/view/layout/head-script.html" -->
+		<link rel="stylesheet" type="text/css" href="/plugins/jquery/jedate/jedate.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/view/layout/sign.css"/>
+	</head>
+		<style type="text/css">
+			.form-horizontal #searchBoxCointer input,.form-horizontal #searchBoxCointer select{border-radius: 4px!important;}
+		</style>
+	<body class='contrast-red' id="main">
+		<!--#include file = "/view/layout/head.html" -->
+		<!--#include file = "/view/layout/left-nav.html" -->
+		<section id='content'>
+			<!--#include file = "/view/layout/header.html" -->
+			<div class='container-fluid text-center'>
+				<div class='row-fluid'>
+						<div class='span12'>
+							<div class='header'>									
+								<div class='pull-left'>
+									<ul class='breadcrumb '>
+										<li class='active'>用户信息修改</li>
+										<!--<li class='active'>></li>
+										<li class='active'>人员列表</li>-->
+									</ul>
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="box-content user-info">
+					<form class="form-horizontal" role="form">
+						<div class="row-fluid oderSearch searchBox text-left" style="white-space: nowrap;" >
+							<div class="table-title" style="height: 40px;line-height: 30px;">用户信息</div>
+							<div  class="clearfix">
+
+									<div class="searchItem ">
+											<div >系统编号:</div>
+											<input name="usernumber" class="usernumber span12" placeholder="系统编号" type="text" readonly="readonly">
+									</div>
+									
+									<div class="searchItem ">
+											<div >员工编号(必填):</div>
+											<input name="salesNum" class="salesNum span12" placeholder="系统编号" type="text" >
+									</div>
+									
+									<div class="clearfix"></div>
+									<div class="searchItem margin-top-10">
+											<div >员工姓名(必填):</div>
+											<input name="username" class="username span12" placeholder="员工姓名" type="text">											
+									</div>
+									
+									<div class="searchItem margin-top-10">
+											<div >岗位名称:</div>											
+											<select class='profess span12' name="profess">
+					                            <!--<option value='' class="hide" /></option>-->
+					                            <option value='A' >助理财富经理</option>
+					                            <option value='B' >财富店长</option>
+					                            <option value='C' >财富经理</option>
+					                            <option value='D' >直营团队负责人</option>
+					                            <option value='E' >高级财富经理</option>
+					                            <option value='F' >渠道经理</option>
+					                            <option value='G' >储备团队负责人</option>
+					                             <option value='H' >储备店长 	</option>				                          
+					                        </select>	
+									</div>
+								
+									<div class="searchItem margin-top-10">
+											<div >邮箱:</div>
+											 <input  name="email" class="email span12"  placeholder="邮箱" type="email" >
+									</div>
+									<div class="searchItem margin-top-10">
+											<div >手机号码(必填):</div>
+											 <input  name="phone" class="phone span12" placeholder="手机号码" type="text" >
+									</div>
+								
+									<div class="searchItem margin-top-10">
+											<div >证件类型:</div>
+											<select class="form-control idType span12" name="idType">						                        
+						                           <option value="I">身份证</option>
+						                           <option value="T">临时身份证</option>
+						                           <option value="S">士兵证</option>
+						                           <option value="B">军官证</option>
+						                           <option value="P">护照</option>
+						                           <option value="L">营业执照</option>
+						                           <option value="O">其他有效证件</option>
+						                           <option value="R">户口簿</option>
+						                           <option value="H">港澳居民来往内地通行证</option>
+						                           <option value="W">台湾同胞来往内地通行证</option>
+						                           <option value="F">外国人居留证</option>
+						                           <option value="C">警官证</option>
+						                           <option value="V">香港身份证</option>
+						                           <option value="X">澳门身份证</option>
+						                           <option value="Y">台湾身份证</option>
+						                           <option value="Z">其他证件</option>					                            										
+											</select>
+									</div>
+									<div class="searchItem margin-top-10">
+											<div >证件号码(必填):</div>
+											<input name="idCard" class="idCard span12"  placeholder="证件号码" type="text" >
+									</div>
+
+									<div class="searchItem margin-top-10">
+											<div >入职时间:</div>
+											<input type="text" class=" input-group date entryDate span12" value="" name="entryDate" />
+									</div>
+									<div class="searchItem margin-top-10">
+											<div >年龄:</div>
+											<input name="age" class="age span12"  placeholder="年龄" type="text" >
+									</div>
+
+									<div class="searchItem margin-top-10">
+											<div >在职状态:</div>
+											<select class=" position_status span12" name="position_status">						                        
+						                            <option value='Z' >在职</option>
+						                            <option value='L' >离职</option>						                            										
+										    </select>
+									</div>
+									<div class="searchItem margin-top-10">
+											<div >毕业院校:</div>
+											<input class="graUniversity span12"  placeholder="毕业院校" type="text" name="graUniversity">
+									</div>
+		
+									<div class="searchItem margin-top-10">
+											<div >最高学历:</div>
+											<select class="maxEducation span12" name="maxEducation">
+					                        	<!--<option value='' class="hide" ></option>-->
+					                            <option value='A' >大学本科</option>
+					                            <option value='B' >大专</option>
+					                            <option value='C' >硕士研究生</option>
+					                            <option value='D' >博士研究生</option>
+					                            <option value='E' >高中</option>											
+											</select>
+									</div>
+									<div class="searchItem margin-top-10">
+											<div >最高学位:</div>
+											 <input  class="maxDegree span12" placeholder="最高学位" type="text" name="maxDegree">
+									</div>
+									
+									<div class="searchItem margin-top-10">
+											<div >获奖经历:</div>
+											<textarea  class="span12 awardExperie" style="height: 80px;" name="awardExperie">
+											
+											</textarea>
+									</div>
+									<div class="searchItem margin-top-10">
+											<div >擅长领域:</div>
+											<textarea  class="span12 adeptDomain"style="height: 80px;" name="adeptDomain">
+											
+											</textarea>
+									</div>
+								<div class="clearfix"></div>														
+								<div class='margin-top-30 margin-bottom-10 pull-right text-right searchItem'>
+									<button name="button"  class="button-white  margin-right-15" onclick="black();">返回</button>
+								    <button name="button" class="button-blue" onclick="changePassWord();">修改</button>								    								    
+							   	</div>							                                   
+							</div>															
+						</div>
+																
+
+							
+					</form>
+                </div>
+			</div>
+		</section>
+		
+		<!--#include file = "/view/layout/foot.html" -->
+		<!--#include file = "/view/layout/foot-script.html" -->
+</body>
+</html>	
+<script src="/plugins/jquery/jedate/jquery.jedate.min.js"></script>
+<script src="/js/view/sign/userUpdate.js" type="text/babel"></script>

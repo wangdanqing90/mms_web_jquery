@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<!--#include file = "/view/layout/head-script.html" -->
+		<link rel="stylesheet" type="text/css" href="/plugins/jquery/jedate/jedate.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/view/layout/sign.css"/>
+		<script src='/plugins/jquery/pagination/pagination.js' type='text/javascript'></script>
+	</head>
+	<style type="text/css">	
+		
+	</style>
+	<body class='contrast-red' id="main">
+		<!--#include file = "/view/layout/head.html" -->
+		<!--#include file = "/view/layout/left-nav.html" -->
+		<section id='content' class="management ">
+			<!--#include file = "/view/layout/header.html" -->
+			
+			
+			
+					<!-- 操作页面跳转效果不好,就写一个页面用tab切换代替 -->
+				<!--<ul class="nav nav-tabs " id="myTab" style="height: 20px;">
+				  <li ><a href="#index"  data-toggle="tab">11</a></li>
+				  <li class="active"><a href="#manage"  data-toggle="tab">编码</a></li>
+				  <li><a href="#deatil"  data-toggle="tab">11</a></li>
+				  <li><a href="#leave"  data-toggle="tab">11</a></li>
+				  <li><a href="#add"  data-toggle="tab">11</a></li>
+				</ul>-->
+				<div class="tab-content" style="margin: 0 auto;overflow: hidden;">
+					  <!-- 默认加载 管理页面的 -->
+					  
+					  <div class="tab-pane active " id="index">
+					  		
+					  		<!--#include file = "/view/organizationPerson/management/index.html" -->
+					  </div>
+					  <!-- 编码页面  -->
+					 <div class="tab-pane hide" id="manage">
+					  		<!--#include file = "/view/organizationPerson/management/manage.html" -->
+					  </div> 
+					  
+					  <!-- 查看详情 -->
+					  <div class="tab-pane " id="deatil">
+					  		<!--#include file = "/view/organizationPerson/management/detail.html" -->
+					  </div>
+					  
+					   <!-- 增加 -->
+					  <div class="tab-pane " id="add">
+					  		<!--#include file = "/view/organizationPerson/management/add.html" -->
+					  </div> 
+					   <!-- 修改 -->
+					  <div class="tab-pane" id="update">
+					  		<!--#include file = "/view/organizationPerson/management/update.html" -->
+					  </div> 
+					   <!-- 模板导入 -->
+					  <div class="tab-pane" id="import">
+					  		<!--#include file = "/view/organizationPerson/management/import.html" -->
+					  </div> 
+				
+				</div>
+			
+	</section>										
+	<!--#include file = "/view/layout/foot.html" -->
+	<!--#include file = "/view/layout/foot-script.html" -->
+	
+</body>
+</html>	
+<script src="/plugins/jquery/jedate/jquery.jedate.min.js"></script>
+<script src="/js/view/organizationPerson/management.js" type="text/babel"></script>

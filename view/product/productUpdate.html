@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<!--#include file = "/view/layout/head-script.html" -->
+		<link rel="stylesheet" type="text/css" href="/plugins/jquery/jedate/jedate.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/view/layout/sign.css"/>		
+	</head>
+		<style type="text/css">
+				input,select{width: auto;cursor: pointer;}											
+				.error{border:1px solid red!important;}								
+		</style>
+	<body class='contrast-red' id="main">
+		<!--#include file = "/view/layout/head.html" -->
+		<!--#include file = "/view/layout/left-nav.html" -->
+		<section id='content' class="padding-0">
+			<!--#include file = "/view/layout/header.html" -->
+			<div class='container-fluid text-center'>
+				<div class="box-content user-info">
+					<div class='row-fluid'>
+						<div class='span12'>
+							<div class='header'>									
+								<div class='pull-left'>
+									<ul class='breadcrumb '>
+										<li class='active'>产品补录</li>
+										<li class='active'>></li>
+										<li class='active'>产品修改</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="clearfix"></div>
+					<form class="form-horizontal" role="form" autocomplete="off">
+						<div class="row-fluid oderSearch searchBox text-left" style="white-space: nowrap;" >							
+							<div class="table-title" style="height: 40px;line-height: 30px;">产品修改:</div>				
+							<div  class="clearfix">
+								<div class="searchItem">
+									<div >产品编号(必填):</div>
+									<input name="proNum" class="proNum  span12" placeholder="产品编号" type="text"  >
+								</div>
+								<div class="searchItem">
+								 	<div>产品名称(必填):</div>
+								   <input type="text" name="proName" class="span12  proName" placeholder="产品名称" value="" />
+								</div>
+								
+								<div class="searchItem margin-top-10">
+									<div >存续期(天):</div>
+									 <input  name="proTime" class="proTime span12"  placeholder="存续期" type="text" >
+								</div>
+								<div class="searchItem margin-top-10">
+								 	<div>年利率:(%/必填):</div>
+								   <input name="proRate" onkeyup='upperCase(this)'  class="proRate span12" id="appendedPrependedInput" placeholder="年利率" type="text" >
+								</div>
+								
+								
+								<div class="searchItem margin-top-10">
+									<div >起投金额(元/必填):</div>
+									<input name="minMonely" onkeyup='$.upperCase(this)' class="minMonely span12"  placeholder="起投金额(元)" type="text">
+								</div>
+								<div class="searchItem margin-top-10">
+								 	<div>销售渠道:</div>
+								    <select class='form-control span12 outerSystem' >
+						            </select>
+								</div>
+								
+								<div class="searchItem margin-top-10">
+									<div>发行规模(元):</div>
+									<input name="proScale" onkeyup='$.upperCase(this)' type="text" class="proScale span12" placeholder="发行规模(元)" value="" />
+								</div>
+								<div class="searchItem margin-top-10">
+								 	<div>创建时间(必填):</div>
+								    <input name="creatTime" type="text" class="creatTime span12 date" placeholder="创建时间" value="" />
+								</div>
+								
+								<div class="searchItem margin-top-10">
+									<div>募集开始日期(必填):</div>
+									<input name="startTime" type="text" class="startTime span12 date" placeholder="募集开始日期" value=""/>
+								</div>
+								<div class="searchItem margin-top-10">
+								 	<div>募集结束日期(必填):</div>
+								    <input name="endTime" type="text" class="endTime span12 date" placeholder="募集结束日期" value=""/>
+								</div>
+								
+								<div class="searchItem margin-top-10">
+									<div>产品起息日(必填):</div>
+									<input name="proStartDate" type="text" class="span12 proStartDate date" placeholder="起息日" value="" />
+								</div>
+								<div class="searchItem margin-top-10">
+								 	<div>产品到期日(必填):</div>
+								    <input name="proEndDate" type="text" class="span12 proEndDate date" placeholder="到期日"  value=""/>
+								</div>
+								
+								<div class="searchItem margin-top-10">
+									<div>还款方式:</div>
+									<select class='form-control span12 repayment' >
+					                </select>
+								</div>
+								<div class="searchItem margin-top-10">
+								 	<div>风险类型:</div>
+								    <select class='form-control span12 riskType' >
+					                </select>
+								</div>
+								
+								<div class="searchItem margin-top-10">
+									<div>投资最高份额:</div>
+									<input name="maxInvestAmount" onkeyup='$.upperCase(this)' type="text" class="span12 maxInvestAmount" placeholder="投资最高份额" value=""  />
+								</div>
+								<div class="searchItem margin-top-10">
+								 	<div>兑付日(必填):</div>
+								    <input name="honour" type="text" class="span12 honour date" placeholder="兑付日" value="" />
+								</div>
+								
+								<div class="searchItem margin-top-10">
+									<div>产品状态:</div>
+									<select class='form-control span12 status' >
+					                           			                          
+					                        </select>	
+								</div>
+								<div class="searchItem margin-top-10">
+								 	<div>渠道来源:</div>
+								   <input name="source" type="text" class="span12 source"  value="补录" readonly="readonly" />
+								</div>
+								
+								<div class="clearfix"></div>
+																					
+								<div class="row-fluid text-center margin-top-20">
+									<button class="button-blue" onclick="submitForm();">确认修改</button>
+									<button  class="button-white margin-left-24" onclick="black();">返回</button>
+									
+								</div>
+																
+							</div>
+						</div>																																																														
+					</form>
+                </div>
+			</div>
+		</section>
+		
+		<!--#include file = "/view/layout/foot.html" -->
+		<!--#include file = "/view/layout/foot-script.html" -->
+</body>
+</html>	
+<script src="/plugins/jquery/jedate/jquery.jedate.min.js"></script>
+<script src="/js/view/product/productUpdate.js" type="text/babel"></script>

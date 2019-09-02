@@ -1,0 +1,188 @@
+<!--活动提成参数管理-->
+
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<!--#include file = "/view/layout/head-script.html" -->
+		<link rel="stylesheet" href="../../css/view/performanceManagement/royalty.css" />
+	</head>
+	<style>
+		.table th, .table td{
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: middle;
+		}
+		.searchBox{
+			padding:30px 0;
+		}
+		.button-blue{
+			padding: 0!important;
+		}
+		.row-fluid .box .box-content .title{
+    		padding: 20px 20px;
+    	}
+    	.row-fluid .box .box-content {
+    		padding: 0;
+    	}
+    	
+    	input[type='checkbox']{
+		    width: 18px;
+		    height: 18px;
+		    background-color: #fff;
+		    -webkit-appearance:none;
+		    background: url("../../../img/unsel.png")no-repeat center;
+		    background-size:18px 18px;
+		    margin-right: 5px;
+		}
+		input[type=checkbox]:checked{
+		   	background: url("../../../img/sel.png")no-repeat center;
+		    background-size:18px 18px;
+		}
+		.headsearch select{
+			width: 100%!important;
+		}
+		.headsearch .title{
+			float: none;
+			font-size: 12px;
+		    color: #7F8FA4;
+		    height: 12px;
+		    line-height: 12px;
+		    padding: 0 0 8px 0;
+		}
+		.headsearch input{
+		}
+	</style>
+	<body class='contrast-red ' id="main">
+		<!--#include file = "/view/layout/head.html" -->
+		<!--#include file = "/view/layout/left-nav.html" -->
+		<section id='content'>
+			<!--#include file = "/view/layout/header.html" -->
+			<div class='container-fluid'>
+				<div class='row-fluid' id='content-wrapper'>
+					<div class='span12'>
+						<div class='row-fluid'>
+							<div class='span12'>
+								<div class='header'>
+									<div class='pull-left'>
+										<ul class='breadcrumb '>
+											<li class='active'>审核管理</li>
+											<li class='active'>></li>
+											<li class='active'>组织提成审核</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+
+						<div class="row-fluid headsearch searchBox" id="royalty-header">
+							<div class="searchItem time-search">
+								<div class="title">创建日期:</div>
+								<input type="text" onfocus="this.blur()" name="daterange" id="royalty-header-time" autocomplete="off" class="span12" value="" placeholder="开始时间 ~ 结束时间" />
+							</div>
+
+							<div class="searchItem">
+								<div class="title">创建人:</div>
+								<input class="search-input span12" type="text" id="royalty-header-person" placeholder="模糊搜索">
+							</div>
+							<div class="searchItem margin-top-10">
+								<div class="title">组织名称:</div>
+								<input class="search-input span12" type="text" id="royalty-header-orgName" placeholder="模糊搜索">
+							</div>
+
+							<div class="searchItem margin-top-10" id="select-state">
+								<div class="title">状态:</div>
+								<select class='form-control profess' id="royalty-select-state">
+									<option value='' class="hide" /></option>
+									<option value='' selected>全部</option>
+									<option value='ONCHECK'>待审</option>
+									<option value='PASS'>通过</option>
+									<option value='REFUSED'>驳回</option>
+									<option value='INVALID'>废弃</option>
+								</select>
+							</div>
+							<div class="margin-top-20 searchItem">
+								<button class="button-blue" type="button" id="royalty-header-button" onclick="searchBtn()">搜索</button>
+							</div>
+						</div>
+
+						<!--<div class="row-fluid table-title">
+							<div class="span5">
+								<label>状态绩效参数 </label>
+							</div>
+						</div>-->
+
+						<div class='row-fluid '>
+							<!--<div id="title">
+								状态绩效参数
+							</div>-->
+							<div class='span12 box bordered-box margin-bottom-0' >
+								<div class='box-content '>
+									<div class='title headerTitle' style="font-size: 20px;"> 状态绩效参数</div>
+									<div class='responsive-table'>
+										<div class='scrollable-area'>
+											<table class='table table-bordered table-hover table-striped ' style='margin-bottom:0;'>
+												<thead>
+													<tr>
+														<th>组织编号</th>
+														<th>组织名称</th>
+														<th>提成比例</th>
+														<th>创建人</th>
+														<th>状态</th>
+														<!--<th>类型</th>-->
+														<th>创建日期</th>
+														<th>操作</th>
+													</tr>
+												</thead>
+												<tbody id="royalty-tbody">
+													<!--<tr id=" + item.id + ">
+														<td><input type='checkbox' name='mycheckboxNext'></td>
+														<td>名称</td><td class='color-red'>100%</td>
+														<td class=''>名字</td>
+														<td class='color-red'></td>
+														<td>时间</td>
+														<td>
+															<button class='button-green' onclick='detail(this)'>详情</button>
+															<button class='button-green' onclick='review(this)'>复核</button>
+															<button class='button-green' onclick='discard(this)'>废弃</button>
+														</td>
+													</tr>-->
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row-fluid space-div"></div>
+						<!--翻页-->
+						<div class="row-fluid  page text-center">
+							<div class="box M-box3 m-style hidden-xs" style="height: 36px;" id="box"></div>
+						</div>
+						
+						<!--按钮-->
+						<!--<div class="row-fluid   text-center bottom">
+						<div class='control-group' >
+							<button type='button' class="btn btn-default" onclick="BatchAuditBtn()">批量审核</button>								
+						</div>
+						</div>-->
+					</div>
+				</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+		</section>
+		</div>
+		<!--#include file = "/view/layout/foot.html" -->
+		<!--#include file = "/view/layout/foot-script.html" -->
+	</body>
+
+</html>
+<script>
+</script>
+<script src='../../js/view/performanceManagement/orgCheck.js' type='text/babel'></script>

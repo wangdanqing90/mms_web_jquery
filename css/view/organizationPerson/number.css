@@ -1,0 +1,10 @@
+.table th, .table td{
+	text-align: center;
+	white-space: nowrap;
+}
+
+.leading-in{
+	text-align: center;
+	display: flex;
+    justify-content: space-around;
+}

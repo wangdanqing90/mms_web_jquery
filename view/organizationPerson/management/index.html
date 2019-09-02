@@ -1,0 +1,97 @@
+<!-- tabs-one  start-->
+	<div class="container-fluid row-fluid" style="box-sizing: border-box;">
+		<div class='row-fluid'>
+				<div class='span12'>
+					<div class='header'>									
+						<div class='pull-left'>
+							<ul class='breadcrumb '>
+								<li class='active'>组织与人员管理</li>
+								<li class='active'>></li>
+								<li class='active'>人员列表</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="searchBox" style="">										
+				<form  class="form-horizontal " role = "form" >					
+					<div class="row-fluid " style="white-space: nowrap;">
+						<div>														
+							<div class="searchItem">
+								<label >人员姓名</label>
+								<input type="text" class="span12  s-name" placeholder="请输入人员姓名" autocomplete="off">
+							</div>	
+
+							<div class="searchItem">
+								<label >系统编号</label>
+								<input type="text" class="span12  s-sales" placeholder="请输系统编号" autocomplete="off">
+							</div>	
+							<div class="margin-left-0 margin-top-10 searchItem">
+								<label >联系方式</label>
+								<input type="text" class="span12  s-phone" placeholder="请输入联系方式" autocomplete="off">
+							</div>	
+							<div class="margin-top-10 searchItem">
+								<label >组织名称</label>
+								<input type="text" class="span12  s-salesOrgName" placeholder="请输入名称" autocomplete="off">
+							</div>	
+						</div>	
+						<!--<div class="clearfix"></div>-->
+						
+						<div style="display: block;" class="margin-top-10 searchItem">																					
+							
+							<div class="span2" style="margin-top: 24px;">																
+								<button type="button" class="button-blue  " onclick="getManageList(true)">搜索</button>																								
+							</div>	
+						</div>	
+						
+						<div class="clearfix"></div>
+						
+					</div>		
+				</form>
+				<div class="row-fluid manage-table">						
+					<div class="span12 box bordered-box green-border " >
+								<div class="box-content box-no-padding" >
+									<div class="responsive-table">
+										<div class="scrollable-area">
+											<table class="table table-bordered table-hover text-center  table-striped text-nowrap" style="margin-bottom:0;">
+												<thead>
+													<tr style="border-top: 1px solid rgba(239,243,246,1.0);">
+														<th>系统编号</th>
+														<th>人员姓名</th>
+														<th>员工编号</th>
+														<th>联系方式</th>
+														<th>所属组织</th>
+														<th>客户数</th>
+														<th>状态</th>
+														<th>操作</th>
+													</tr>
+												</thead>
+												<tbody id="role-tbody">																				
+													
+												</tbody>
+											</table>
+											<div class="emptyTable hide">暂无数据</div>
+										</div>
+									</div>
+								</div>
+							</div>
+				</div>	
+					<div class="clearfix"></div>
+					<!--翻页-->
+						<div class="row-fluid  page text-center">			                  
+			                  <div class="box M-box3 m-style " style="height: 36px;" id="box"></div>
+		                </div>
+					<div class="row-fluid text-center">
+						<button class="button-blue" onclick="addNew();" >新增人员</button>
+						<button class="button-white margin-left-40" onclick="imPort();" >人员批量导入</button>
+						<button class="button-white margin-left-40" onclick="exPort();" >模板下载</button>						
+					</div>
+					
+			</div>
+			</div>
+			
+		
+			<!-- tabs-one  end-->
+<script src="/js/view/organizationPerson/management/index.js" type="text/babel"></script>
+			
